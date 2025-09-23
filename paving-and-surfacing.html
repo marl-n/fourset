@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" viewport-fit="cover" />
+        <title>Paving Services | 4Set Civil Construction</title>
+        <link href="img/logo-png.png" rel="icon" type="image/png" />
+        <link href="style.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap"
+            rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+        <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></a>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+
+        }
+
+        /* wrapper styles */
+
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-blue);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .image-text-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .image-container {
+            flex: 1;
+            min-width: 300px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 40px;
+            min-width: 300px;
+        }
+
+        .text-container h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .text-container p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #e53935;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .image-text-section {
+                flex-direction: column;
+            }
+
+            .image-container {
+                width: 100%;
+                max-height: 300px;
+            }
+
+            .text-container {
+                padding: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-container {
+                padding: 20px;
+            }
+
+            .text-container h3 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .btn:hover {
+            background-color: #b71c1c;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #e53935;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #b71c1c;
+        }
+
+        @media (max-width: 320px) {
+
+            .text-container p {
+                margin-right: 10px;
+                margin-bottom: 20px;
+                color: #555;
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            .text-container h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                color: #2c3e50;
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #183a6d;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .service-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1565c0;
+        }
+
+        .service-content ul {
+            padding-left: 20px;
+            margin: 15px 0;
+            flex-grow: 1;
+        }
+
+        .service-content li {
+            margin-bottom: 8px;
+        }
+
+        .service-cta {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .service-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1565c0;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .service-btn:hover {
+            background-color: #0d47a1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Paving Types Section */
+        .paving-types {
+            background-color: #e3f2fd;
+            padding: 80px 0;
+        }
+
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .type-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .type-img {
+            height: 200px;
+            background-color: #1565c0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .type-content {
+            padding: 25px;
+        }
+
+        .type-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1565c0;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: #1565c0;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .btn-light {
+            background-color: white;
+            color: #1565c0;
+        }
+
+        .btn-light:hover {
+            background-color: #f5f5f5;
+        }
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FAQ */
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .divider {
+            height: 4px;
+            width: 80px;
+            background: #e74c3c;
+            margin: 0 auto 30px;
+            border-radius: 2px;
+        }
+
+        .faq-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .faq-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-category {
+            margin-bottom: 40px;
+        }
+
+        .faq-category h2 {
+            color: #1565c0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e3f2fd;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #e3f2fd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #e3f2fd;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer p {
+            margin-bottom: 15px;
+        }
+
+        .faq-answer ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 8px;
+        }
+
+        .contact-cta {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: white;
+            margin-top: 40px;
+        }
+
+        .contact-cta h2 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+
+
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .faq-container {
+                padding: 20px;
+            }
+
+            .faq-question {
+                padding: 15px;
+            }
+        }
+    </style>
+
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <div class="container header-container">
+                <a href="#home" class="logo">
+                    <img src="img/logo.png" alt="4set-construction-logo">
+                </a>
+                <nav>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" onclick="return false;" class="active">Services <i
+                                    class="fas fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="service.html">All Services</a></li>
+                                <li><a href="asphalt-and-tar-services.html">Asphalt Surfacing</a></li>
+                                <li><a href="paving-and-surfacing.html">Paving & Surfacing</a></li>
+                                <li><a href="courts-surfacing.html">Court Surfacing</a></li>
+                                <li><a href="road-construction.html">Road Construction</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="project-gallery.html">Projects</a></li>
+                        <li><a href="service-areas.html">Service Areas</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Professional Paving Services</h1>
+                    <p>Expert paving solutions for driveways, walkways, patios, and commercial spaces using brick,
+                        cobble, bevel, and other premium materials</p>
+                    <div class="hero-btns">
+                        <a aria-label="Get a Fast Quote" class="btn btn-red" href="#contact">Get a Fast Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><span class="breadcrumb-separator">/</span></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><span class="breadcrumb-separator">/</span></li>
+                    <li aria-current="page" class="active"><a href="paving-and-surfacing.html">Paving Services</a></li>
+
+                </ol>
+            </div>
+        </nav>
+        <!-- Service Section -->
+        <div class="container">
+            <div class="image-text-section" style="border-radius: 0 0 12px 12px; margin-top: 40px;">
+                <div class="image-container">
+                    <img alt="Paving services" src="img/paving-bkgrnd.jpg" />
+                </div>
+                <div class="text-container">
+                    <h3>Paving Services in Gauteng</h3>
+                    <p>We offer a wide range of paving services in Gauteng, including new paving installations, repairs,
+                        and maintenance.</p>
+                    <p></p>
+                    <a aria-label="Learn More" class="btn" href="#Sub-Section">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Services Sub-Sec -->
+        <section class="services" id="Sub-Section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Paving Services</h2>
+                    <p>Comprehensive paving solutions tailored to meet the needs of homeowners, businesses, and
+                        communities</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img alt="" src="img/pave.jpg" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Residential Paving</h3>
+                            <p>Beautiful and durable paving solutions for homeowners</p>
+                            <ul>
+                                <li>Driveway paving and installation</li>
+                                <li>Garden pathways and walkways</li>
+                                <li>Patio and entertainment areas</li>
+                                <li>Pool surrounds and decking</li>
+                            </ul>
+                            <div class="service-cta">
+                                <a class="service-btn" href="#contact">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img alt="commecial paving company near me" src="img/paving-near-me-1.jpg" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Commercial Paving</h3>
+                            <p>Durable paving solutions for businesses and commercial properties</p>
+                            <ul>
+                                <li>Commercial parking areas</li>
+                                <li>Shopping center walkways</li>
+                                <li>Office building entrances</li>
+                                <li>Restaurant outdoor seating areas</li>
+                            </ul>
+                            <div class="service-cta">
+                                <a class="service-btn" href="#contact">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img alt="Paving Repair &amp; Maintenance" src="img/paving-repair.jpg" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Paving Repair &amp; Maintenance</h3>
+                            <p>Comprehensive repair and maintenance services for existing paved surfaces</p>
+                            <ul>
+                                <li>Paving repair and replacement</li>
+                                <li>Weed removal and joint re-sanding</li>
+                                <li>Surface leveling and correction</li>
+                                <li>Sealing and protective treatments</li>
+                            </ul>
+                            <div class="service-cta">
+                                <a class="service-btn" href="#contact">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img alt="" src="img/new-paving.jpg" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Industrial Paving</h3>
+                            <p>Heavy-duty paving solutions for industrial facilities and commercial properties</p>
+                            <ul>
+                                <li>Public square and plaza paving</li>
+                                <li>Sidewalk and footpath construction</li>
+                                <li>Park and recreational area paving</li>
+                                <li>Historic district restoration</li>
+                            </ul>
+                            <div class="service-cta">
+                                <a class="service-btn" href="#contact">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Paving Types Section -->
+        <section class="paving-types">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Paving Materials We Work With</h2>
+                    <p>We specialize in various paving materials to suit different styles and budgets</p>
+                </div>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <div class="type-img">
+                            <i class="fas fa-th-large"></i>
+                        </div>
+                        <div class="type-content">
+                            <h3>Brick Pavers</h3>
+                            <p>Classic clay brick pavers offer timeless appeal with excellent durability. Available in
+                                various colors, sizes, and patterns to complement any architectural style.</p>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <img alt="Tar Driveways" src="img/paving-bkgrnd.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="type-content">
+                            <h3>Cobblestone Pavers</h3>
+                            <p>Natural stone cobblestones provide a historic, rustic charm with exceptional longevity.
+                                Ideal for creating old-world elegance in modern settings.</p>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <i class="fas fa-grip-horizontal"></i>
+                        </div>
+                        <div class="type-content">
+                            <h3>Bevel Pavers</h3>
+                            <p>Concrete bevel pavers with slightly angled edges create visual interest and help with
+                                drainage. Available in numerous colors and textures.</p>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <i class="fas fa-border-all"></i>
+                        </div>
+                        <div class="type-content">
+                            <h3>Interlocking Pavers</h3>
+                            <p>Interlocking concrete pavers create strong, stable surfaces that can withstand heavy use.
+                                Perfect for driveways and high-traffic areas.</p>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="type-content">
+                            <h3>Natural Stone Pavers</h3>
+                            <p>Natural stone including slate, bluestone, travertine, and limestone offers unique beauty
+                                with each piece being one-of-a-kind.</p>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="type-content">
+                            <h3>Permeable Pavers</h3>
+                            <p>Eco-friendly permeable pavers allow water to seep through, reducing runoff and supporting
+                                sustainable drainage solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Benefits Section -->
+        <section class="benefits">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Benefits of Professional Paving</h2>
+                    <p>Why choose professional paving services for your property</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>Enhanced Curb Appeal</h3>
+                        <p>Beautiful paving significantly improves the appearance and value of your property</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Durability</h3>
+                        <p>Professional installation ensures your paved surfaces withstand weather and heavy use</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-tint"></i>
+                        <h3>Proper Drainage</h3>
+                        <p>Expert installation includes proper grading for effective water drainage</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Low Maintenance</h3>
+                        <p>Quality paving requires minimal upkeep compared to other surfaces</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2 style="color: #e3f2fd;">Ready to Start Your Project?</h2>
+                <p>Contact us today for a free consultation and quote. Our team of experts is ready to provide the
+                    construction services you need.</p>
+                <a aria-label="Contact Us Today" class="btn btn-light" href="contact.html">Contact Us Today</a>
+            </div>
+        </section>
+        <!-- Three Step Process Section -->
+        <section class="three-step-process">
+            <div class="process-header">
+                <p class="process-subtitle">Our Simple Three Step Process</p>
+                <h2 class="process-title">Working With Us Is Easy As 1-2-3</h2>
+            </div>
+            <div class="process-content">
+                <div class="steps-list">
+                    <div class="step-tab active" data-step="1">
+                        <span class="step-tab-label">STEP</span>
+                        <span class="step-tab-number">1</span>
+                    </div>
+                    <div class="step-tab" data-step="2">
+                        <span class="step-tab-label">STEP</span>
+                        <span class="step-tab-number">2</span>
+                    </div>
+                    <div class="step-tab" data-step="3">
+                        <span class="step-tab-label">STEP</span>
+                        <span class="step-tab-number">3</span>
+                    </div>
+                </div>
+                <div class="step-details">
+                    <div class="step-info">
+                        <h3 class="step-title"></h3>
+                        <p class="step-desc"></p>
+                        <a aria-label="Contact via WhatsApp" class="step-btn"
+                            href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                            target="_blank"></a>
+                    </div>
+                    <div class="step-img-container">
+                        <img alt="Step Illustration" class="step-img" src="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Three Step Process Section -->
+        <!-- FAQ Section -->
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Paving Services FAQs</h2>
+                    <p>Answers to common questions about our paving services</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does a paved surface typically last?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>With proper installation and maintenance, paved surfaces can last 20-25 years or more. Brick
+                            and stone pavers often have the longest lifespan, while concrete pavers typically last 15-20
+                            years. Regular maintenance like joint sand replenishment and occasional sealing can extend
+                            the life of your paved surfaces.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What's the difference between brick pavers and concrete pavers?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Brick pavers are made from clay and fired in a kiln, offering a classic look and natural
+                            color variations. Concrete pavers are made from a mixture of cement and aggregates, offering
+                            more uniform appearance and a wider range of color options. Brick tends to be more expensive
+                            but offers timeless appeal, while concrete provides excellent durability and
+                            cost-effectiveness.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can paving be installed in any weather?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ideal paving conditions are dry with moderate temperatures. We avoid paving during heavy rain
+                            or extreme heat, as these conditions can affect the installation quality. In winter, paving
+                            is generally not recommended when temperatures are near or below freezing. We monitor
+                            weather forecasts carefully and schedule projects accordingly to ensure optimal results.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How much maintenance do paved surfaces require?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Paved surfaces require relatively low maintenance. Regular sweeping and occasional washing
+                            are usually sufficient. We recommend reapplying joint sand every 2-3 years and sealing every
+                            3-5 years for maximum protection and appearance. For areas with weed growth, occasional weed
+                            control may be necessary.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can paving be installed over an existing concrete surface?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, in many cases pavers can be installed over existing concrete surfaces, provided the
+                            concrete is in good condition with no significant cracks or settling. This can be a
+                            cost-effective option as it eliminates the need for demolition and base preparation. We
+                            assess each situation individually to determine if overlay installation is appropriate.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-cta">
+                <h2>Still Have Questions?</h2>
+                <p>Reach out with any follow-up questions—our experts are ready to assist.</p>
+                <a aria-label="Contact Us Today" class="btn" href="contact.html">Contact Us Today</a>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="contact section-padding" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Ready to start your construction project? Get in touch with our team</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-details">
+                            <div>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Our Location</h4>
+                                    <p>6540 Mmaba Crescent, Mooifontein 14-IR, Kempton Park, 1618, GA</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+27 73 509 0269</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Address</h4>
+                                    <p>foursetconstruction@gmail.com </p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Working Hours</h4>
+                                    <p>Monday-Friday: 7:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="map" href="service-areas.html"
+                            style="height: 250px; background: url(img/service-area-gauteng.svg) center/cover  no-repeat; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; border: 1px solid var(--primary-red); text-decoration: none; color: var(--primary-blue); margin-top: 20px;">
+                        </a>
+                        <h6 style="padding-top: 5px; position: relative; align-items: center;">Our Service Area Map</h6>
+                    </div>
+                    <div class="contact-form">
+                        <form action="https://formsubmit.co/marln.tsusa@gmail.com" id="contactForm" method="POST"
+                            target="_blank">
+                            <div>
+                                <input aria-label="Your Name" name="name" placeholder="Your Name" required=""
+                                    type="text" />
+                            </div>
+                            <div>
+                                <input aria-label="Your Email" name="email" placeholder="Your Email" required=""
+                                    type="email" />
+                            </div>
+                            <div>
+                                <input aria-label="Your Phone" name="phone" placeholder="Your Phone" type="tel" />
+                            </div>
+                            <div>
+                                <select aria-label="Service" name="service" required="">
+                                    <option disabled="" selected="" value="">Select Service</option>
+                                    <option value="roads">Road Construction</option>
+                                    <option value="tar driveways">Tar Surfacing</option>
+                                    <option value="asphalt">Asphalt Services</option>
+                                    <option value="paving">Paving &amp; Surfacing</option>
+                                    <option value="courts">Court Construction</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea aria-label="Your Message" name="message" placeholder="Your Message"
+                                    required=""></textarea>
+                            </div>
+                            <button aria-label="Send Message" class="btn btn-red" style="width: 100%;"
+                                type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Section -->
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-container">
+                <div class="footer-col">
+                    <h3>4Set Civil Construction</h3>
+                    <p>Building high-quality, durable infrastructure that enhances communities and improves lives since
+                        2015.</p>
+                    <div class="social-icons">
+                        <a aria-label="Follow us on Facebook" href="https://www.facebook.com/share/15aJpiG4gy/"
+                            target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a aria-label="Contact via WhatsApp"
+                            href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                            target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a aria-label="Follow us on Instagram" href="https://instagram.com/4set_construction"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="road-construction.html">Road Construction</a></li>
+                        <li><a href="asphalt-and-tar-services.html">Asphalt &amp; Tar Services</a></li>
+                        <li><a href="paving-and-surfacing.html">Paving &amp; Surfacing</a></li>
+                        <li><a href="court-construction.html">Court Construction</a></li>
+                        <li><a href="infrastructure-repair.html">Infrastructure Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for project updates and industry insights.</p>
+                    <form>
+                        <input aria-label="Your Email" placeholder="Your Email"
+                            style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: none;"
+                            type="email" />
+                        <button aria-label="Subscribe" class="btn" style="width: 100%;" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>©4Set Civil Construction. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- ...scripts... -->
+        <script src="script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const faqItems = document.querySelectorAll('.faq-item');
+
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+
+                    question.addEventListener('click', () => {
+                        // Close all other items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+
+                        // Toggle current item
+                        item.classList.toggle('active');
+                    });
+                });
+
+                // Open first question by default
+                if (faqItems.length > 0) {
+                    faqItems[0].classList.add('active');
+                }
+            });
+        </script>
+        <!-- WhatsApp Floating Button -->
+        <a aria-label="Contact via WhatsApp" class="whatsapp-float"
+            href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+            target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="whatsapp-tooltip">
+            Contact us on WhatsApp!
+        </div>
+        <script
+            type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourdomain.com/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://yourdomain.com/service.html"}, {"@type": "ListItem", "position": 3, "name": "Paving & Surfacing", "item": "https://yourdomain.com/paving-and-surfacing.html"}]}</script>
+    </body>
+
+</html>

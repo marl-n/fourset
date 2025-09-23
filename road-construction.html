@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" viewport-fit="cover" />
+        <title>Road Construction | 4Set Civil Construction</title>
+        <link href="img/logo-png.png" rel="icon" type="image/png" />
+        <link href="style.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap"
+            rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+        <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></a>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+
+        }
+
+        /* wrapper styles */
+
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .image-text-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .image-container {
+            flex: 1;
+            min-width: 300px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 40px;
+            min-width: 300px;
+        }
+
+        .text-container h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .text-container p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #e53935;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .image-text-section {
+                flex-direction: column;
+            }
+
+            .image-container {
+                width: 100%;
+                max-height: 300px;
+            }
+
+            .text-container {
+                padding: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-container {
+                padding: 20px;
+            }
+
+            .text-container h3 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .btn:hover {
+            background-color: #b71c1c;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #e53935;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #b71c1c;
+        }
+
+        @media (max-width: 320px) {
+
+            .text-container p {
+                margin-right: 10px;
+                margin-bottom: 20px;
+                color: #555;
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            .text-container h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                color: #2c3e50;
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #183a6d;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .service-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1565c0;
+        }
+
+        .service-content ul {
+            padding-left: 20px;
+            margin: 15px 0;
+            flex-grow: 1;
+        }
+
+        .service-content li {
+            margin-bottom: 8px;
+        }
+
+        .service-cta {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .service-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1565c0;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .service-btn:hover {
+            background-color: #0d47a1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Process Section */
+        .process {
+            background-color: #e3f2fd;
+            padding: 80px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .process-step i {
+            font-size: 2.5rem;
+            color: #1565c0;
+            margin-bottom: 20px;
+        }
+
+        .process-step h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .btn-light {
+            background-color: white;
+            color: #1565c0;
+        }
+
+        .btn-light:hover {
+            background-color: #f5f5f5;
+        }
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FAQ */
+
+
+        .heading h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+
+        .divider {
+            height: 4px;
+            width: 80px;
+            background: #e74c3c;
+            margin: 0 auto 30px;
+            border-radius: 2px;
+        }
+
+        .faq-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .faq-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-category {
+            margin-bottom: 40px;
+        }
+
+        .faq-category h2 {
+            color: #1565c0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e3f2fd;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #e3f2fd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #e3f2fd;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer p {
+            margin-bottom: 15px;
+        }
+
+        .faq-answer ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 8px;
+        }
+
+        .contact-cta {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: white;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .contact-cta h2 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+
+
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .faq-container {
+                padding: 20px;
+            }
+
+            .faq-question {
+                padding: 15px;
+            }
+        }
+    </style>
+
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <div class="container header-container">
+                <a href="#home" class="logo">
+                    <img src="img/logo.png" alt="4set-construction-logo">
+                </a>
+                <nav>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" onclick="return false;" class="active">Services <i
+                                    class="fas fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="service.html">All Services</a></li>
+                                <li><a href="asphalt-and-tar-services.html">Asphalt Surfacing</a></li>
+                                <li><a href="paving-and-surfacing.html">Paving & Surfacing</a></li>
+                                <li><a href="courts-surfacing.html">Court Surfacing</a></li>
+                                <li><a href="road-construction.html">Road Construction</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="project-gallery.html">Projects</a></li>
+                        <li><a href="service-areas.html">Service Areas</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Road Construction</h1>
+                    <p>Road Construction Services for Durable and Safe Infrastructure</p>
+                    <div class="hero-btns">
+                        <a aria-label="Get a Fast Quote" class="btn btn-red" href="#contact">Get a Fast Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><span class="breadcrumb-separator">/</span></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><span class="breadcrumb-separator">/</span></li>
+                    <li aria-current="page" class="active"><a href="road-construction.html">Road Construction</a></li>
+
+                </ol>
+            </div>
+        </nav>
+        <!-- Service Section -->
+        <div class="container">
+            <div class="section-title">
+            </div>
+            <div class="image-text-section">
+                <div class="image-container">
+                    <img alt="Road construction" src="img/road-construction.jpg" />
+                </div>
+                <div class="text-container">
+                    <h3>Road Construction Services in Gauteng</h3>
+                    <p>We offer a wide range of road construction services in Gauteng, including new road construction,
+                        road maintenance, and rehabilitation.</p>
+                    <p></p>
+                    <a aria-label="Learn More" class="btn" href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Services Sub-Sec -->
+        <section class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Road Construction Services</h2>
+                    <p>Comprehensive road construction solutions tailored to meet the needs of municipalities,
+                        businesses, and communities</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img alt="Road maintenance image" src="img/driveway-installation.jpg" />
+                        </div>
+                        <div class="service-content">
+                            <h3>New Road Construction</h3>
+                            <p>Complete design and construction of new roadways for residential, commercial, and
+                                industrial areas</p>
+                            <ul>
+                                <li>Subgrade preparation and compaction</li>
+                                <li>Base course installation</li>
+                                <li>Drainage system implementation</li>
+                                <li>Paving and finishing</li>
+                            </ul>
+                            <div class="service-cta">
+                                <a class="service-btn" href="road-construction.html">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img alt="road repairs near me" src="img/road-maintainance.jpg" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Road Maintenance &amp; Repair</h3>
+                            <p>Extend the life of existing roadways with our comprehensive maintenance programs</p>
+                            <ul>
+                                <li>Pothole repair and patching</li>
+                                <li>Crack sealing and filling</li>
+                                <li>Surface rehabilitation</li>
+                                <li>Preventative maintenance treatments</li>
+                            </ul>
+                            <div class="service-cta">
+                                <a class="service-btn" href="road-construction.html">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img alt="" src="img/road-widening.jpg" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Road Widening &amp; Improvements</h3>
+                            <p>Capacity expansion and safety improvements for existing road networks</p>
+                            <ul>
+                                <li>Lane additions and widening</li>
+                                <li>Shoulder improvements</li>
+                                <li>Curve realignment</li>
+                                <li>Sight distance improvements</li>
+                            </ul>
+                            <div class="service-cta">
+                                <a class="service-btn" href="road-construction.html">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img alt="Gravel road construction near me" src="img/gravel-driveway.jpg" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Gravel Road Construction</h3>
+                            <p>Durable and cost-effective gravel road solutions for rural and agricultural areas</p>
+                            <ul>
+                                <li>Farm access roads</li>
+                                <li>Rural township roads</li>
+                                <li>Forestry roads</li>
+                                <li>Temporary construction access roads</li>
+                            </ul>
+                            <div class="service-cta">
+                                <a class="service-btn" href="road-construction.html">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img alt="municipal-road-construction-company-near-me" src="img/municipal-road.jpg" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Municipal Road Projects</h3>
+                            <p>Collaborating with local governments to improve community infrastructure</p>
+                            <ul>
+                                <li>Residential street construction</li>
+                                <li>Alley improvements</li>
+                                <li>Cul-de-sac construction</li>
+                                <li>Speed hump installation</li>
+                                <li>Road Markings</li>
+                            </ul>
+                            <div class="service-cta">
+                                <a class="service-btn" href="road-construction.html">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img alt="industrial-driveway company" src="img/industrial-road-construction.jpeg" />
+                        </div>
+                        <div class="service-content">
+                            <h3>Industrial Road Construction</h3>
+                            <p>Heavy-duty road solutions for industrial facilities and commercial properties</p>
+                            <ul>
+                                <li>Factory access roads</li>
+                                <li>Loading bay areas</li>
+                                <li>Heavy vehicle circulation areas</li>
+                                <li>Industrial park road networks</li>
+                            </ul>
+                            <div class="service-cta">
+                                <a class="service-btn" href="road-construction.html">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Process Section -->
+        <section class="process">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Road Construction Process</h2>
+                    <p>We follow a systematic approach to ensure quality results on every project</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3>Consultation &amp; Planning</h3>
+                        <p>We begin with a thorough assessment of your needs and site conditions to develop a customized
+                            plan.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-drafting-compass"></i>
+                        <h3>Design &amp; Engineering</h3>
+                        <p>Our team creates detailed designs that meet regulatory requirements and address specific site
+                            challenges.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-excavator"></i>
+                        <h3>Site Preparation</h3>
+                        <p>We prepare the construction area with careful grading, drainage planning, and subbase
+                            preparation.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-road"></i>
+                        <h3>Construction &amp; Paving</h3>
+                        <p>Using quality materials and precision equipment, we build durable roadways that stand the
+                            test of time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2 style="color: #e3f2fd;">Ready to Start Your Road Construction Project?</h2>
+                <p>Contact us today for a free consultation and quote. Our team of experts is ready to deliver the
+                    quality road construction services you need.</p>
+                <a aria-label="Contact Us Today" class="btn btn-light" href="contact.html">Contact Us Today</a>
+            </div>
+        </section>
+        <!-- Three Step Process Section -->
+        <section class="three-step-process">
+            <div class="process-header">
+                <p class="process-subtitle">Our Simple Three Step Process</p>
+                <h2 class="process-title">Working With Us Is Easy As 1-2-3</h2>
+            </div>
+            <div class="process-content">
+                <div class="steps-list">
+                    <div class="step-tab active" data-step="1">
+                        <span class="step-tab-label">STEP</span>
+                        <span class="step-tab-number">1</span>
+                    </div>
+                    <div class="step-tab" data-step="2">
+                        <span class="step-tab-label">STEP</span>
+                        <span class="step-tab-number">2</span>
+                    </div>
+                    <div class="step-tab" data-step="3">
+                        <span class="step-tab-label">STEP</span>
+                        <span class="step-tab-number">3</span>
+                    </div>
+                </div>
+                <div class="step-details">
+                    <div class="step-info">
+                        <h3 class="step-title"></h3>
+                        <p class="step-desc"></p>
+                        <a aria-label="Contact via WhatsApp" class="step-btn"
+                            href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                            target="_blank"></a>
+                    </div>
+                    <div class="step-img-container">
+                        <img alt="Step Illustration" class="step-img" src="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Three Step Process Section -->
+        <!-- FAQ Section -->
+        <div class="container">
+            <div class="heading">
+                <h1>Road Construction FAQs</h1>
+                <p class="subtitle">Find answers to common questions about our road construction services</p>
+                <div class="divider"></div>
+            </div>
+            <div class="faq-container">
+                <div class="faq-intro">
+                    <p>At 4Set Civil Construction, we understand you may have questions about road construction
+                        projects. Below are answers to some of our most frequently asked questions. If you don't find
+                        what you're looking for, please don't hesitate to contact us directly.</p>
+                </div>
+                <!-- General Questions -->
+                <div class="faq-category">
+                    <h2>General Road Construction Questions</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What types of road construction projects does 4Set Civil Construction handle?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We handle a wide range of road construction projects including:</p>
+                            <ul>
+                                <li>New road construction for residential and commercial areas</li>
+                                <li>Road widening and capacity expansion projects</li>
+                                <li>Municipal and township road improvements</li>
+                                <li>Gravel road construction for rural and agricultural areas</li>
+                                <li>Industrial access roads and parking facilities</li>
+                                <li>Road rehabilitation and resurfacing projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How long has 4Set Civil Construction been providing road construction services?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We have been providing expert road construction services since 2015. With nearly a decade
+                                of experience, we've built a reputation for quality workmanship, reliability, and
+                                completing projects on time and within budget.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What areas do you serve for road construction projects?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Based in Kempton Park, we primarily serve the Gauteng region, including Johannesburg,
+                                Pretoria, and surrounding areas. We also undertake projects throughout South Africa for
+                                larger commercial and municipal contracts. Contact us to discuss if we can service your
+                                specific location.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Process & Timeline Questions -->
+                <div class="faq-category">
+                    <h2>Process &amp; Timeline Questions</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is the typical process for a road construction project?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our road construction process typically follows these steps:</p>
+                            <ol>
+                                <li><strong>Initial consultation</strong> to understand your needs and project
+                                    requirements</li>
+                                <li><strong>Site assessment</strong> and evaluation of existing conditions</li>
+                                <li><strong>Project planning</strong> and design, including obtaining necessary permits
+                                </li>
+                                <li><strong>Site preparation</strong> including grading and drainage setup</li>
+                                <li><strong>Base construction</strong> with proper compaction and stabilization</li>
+                                <li><strong>Paving and surfacing</strong> using appropriate materials</li>
+                                <li><strong>Quality inspection</strong> and final touches</li>
+                                <li><strong>Project completion</strong> and client walkthrough</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How long does a typical road construction project take?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The timeline varies significantly based on project size, complexity, and weather
+                                conditions. Here are some general estimates:</p>
+                            <ul>
+                                <li>Small residential road: 2-4 weeks</li>
+                                <li>Commercial parking lot: 3-6 weeks</li>
+                                <li>Municipal road project: 4-12 weeks</li>
+                                <li>Large-scale road construction: 3-6 months</li>
+                            </ul>
+                            <p>We provide detailed timelines during the project planning phase and strive to complete
+                                projects efficiently without compromising quality.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Will road construction disrupt traffic or access to my property?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We understand that minimizing disruption is important. Our approach includes:</p>
+                            <ul>
+                                <li>Developing detailed traffic management plans for each project</li>
+                                <li>Providing clear signage and alternative access routes when needed</li>
+                                <li>Staging work to minimize impact on residents and businesses</li>
+                                <li>Maintaining clear communication about work schedules</li>
+                                <li>Completing high-impact work during off-peak hours when possible</li>
+                            </ul>
+                            <p>We always prioritize safety and strive to maintain access to properties throughout the
+                                construction process.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Materials & Quality Questions -->
+                <div class="faq-category">
+                    <h2>Materials &amp; Quality Questions</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What materials do you use for road construction?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We use high-quality materials appropriate for each specific project, including:</p>
+                            <ul>
+                                <li><strong>Asphalt</strong> - For durable, smooth surfaces on high-traffic roads</li>
+                                <li><strong>Concrete</strong> - For heavy-duty applications requiring exceptional
+                                    durability</li>
+                                <li><strong>Gravel</strong> - For rural and temporary access roads</li>
+                                <li><strong>Recycled materials</strong> - When appropriate for environmental
+                                    sustainability</li>
+                                <li><strong>Specialized composites</strong> - For specific environmental conditions or
+                                    requirements</li>
+                            </ul>
+                            <p>We select materials based on traffic volume, climate conditions, budget, and project
+                                specifications.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do you ensure the quality of your road construction?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We maintain quality through multiple approaches:</p>
+                            <ul>
+                                <li>Employing experienced, skilled construction teams</li>
+                                <li>Using high-quality materials from reputable suppliers</li>
+                                <li>Implementing rigorous quality control checks throughout the project</li>
+                                <li>Adhering to South African road construction standards and regulations</li>
+                                <li>Utilizing proper equipment for each phase of construction</li>
+                                <li>Conducting thorough testing of subgrades and materials</li>
+                                <li>Providing warranties on our workmanship</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you offer warranties on your road construction work?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we stand behind our work with comprehensive warranties. Our standard warranty covers
+                                workmanship for a period of 12-24 months, depending on the project type and materials
+                                used. We also provide material warranties from manufacturers. Specific warranty details
+                                are outlined in your project contract.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cost & Pricing Questions -->
+                <div class="faq-category">
+                    <h2>Cost &amp; Pricing Questions</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How much does road construction cost per meter?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Road construction costs vary significantly based on several factors:</p>
+                            <ul>
+                                <li>Road width and specifications</li>
+                                <li>Materials used (asphalt, concrete, gravel)</li>
+                                <li>Site conditions and preparation requirements</li>
+                                <li>Drainage and utility considerations</li>
+                                <li>Project location and accessibility</li>
+                            </ul>
+                            <p>As a rough estimate, basic road construction can range from R800 to R2,500 per square
+                                meter. We provide detailed, transparent quotes after assessing your specific project
+                                requirements.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you provide free estimates for road construction projects?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer complimentary, no-obligation estimates for all road construction projects.
+                                Our process includes:</p>
+                            <ol>
+                                <li>Initial discussion to understand your project needs</li>
+                                <li>Site visit to assess conditions and take measurements</li>
+                                <li>Detailed proposal outlining scope, timeline, and costs</li>
+                                <li>Opportunity to ask questions and discuss options</li>
+                            </ol>
+                            <p>Contact us to schedule your free estimate.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What factors affect the cost of a road construction project?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Several key factors influence road construction costs:</p>
+                            <ul>
+                                <li><strong>Project size</strong> - Length, width, and total area</li>
+                                <li><strong>Site conditions</strong> - Slope, soil stability, and drainage requirements
+                                </li>
+                                <li><strong>Materials</strong> - Type and quality of surfacing materials</li>
+                                <li><strong>Preparation work</strong> - Clearing, grading, and compaction needed</li>
+                                <li><strong>Accessibility</strong> - Ease of equipment access to the site</li>
+                                <li><strong>Utilities</strong> - Need to relocate or protect existing utilities</li>
+                                <li><strong>Timeline</strong> - Expedited projects may incur additional costs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-cta">
+                <h2>Still Have Questions?</h2>
+                <p>Our team of road construction experts is ready to answer any additional questions you may have</p>
+                <a aria-label="Contact Us Today" class="btn" href="contact.html">Contact Us Today</a>
+            </div>
+        </div>
+        <!-- Contact Section -->
+        <section class="contact section-padding" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Ready to start your construction project? Get in touch with our team</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-details">
+                            <div>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Our Location</h4>
+                                    <p>6540 Mmaba Crescent, Mooifontein 14-IR, Kempton Park, 1618, GA</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+27 73 509 0269</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Address</h4>
+                                    <p>foursetconstruction@gmail.com </p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Working Hours</h4>
+                                    <p>Monday-Friday: 7:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="map" href="service-areas.html"
+                            style="height: 250px; background: url(img/service-area-gauteng.svg) center/cover  no-repeat; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; border: 1px solid var(--primary-red); text-decoration: none; color: var(--primary-blue); margin-top: 20px;">
+                        </a>
+                        <h6 style="padding-top: 5px; position: relative; align-items: center;">Our Service Area Map</h6>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div>
+                                <input aria-label="Your Name" placeholder="Your Name" required="" type="text" />
+                            </div>
+                            <div>
+                                <input aria-label="Your Email" placeholder="Your Email" required="" type="email" />
+                            </div>
+                            <div>
+                                <input aria-label="Your Phone" placeholder="Your Phone" type="tel" />
+                            </div>
+                            <div>
+                                <select required="">
+                                    <option disabled="" selected="" value="">Select Service</option>
+                                    <option value="roads">Road Construction</option>
+                                    <option value="tar driveways">Tar Surfacing</option>
+                                    <option value="asphalt">Asphalt Services</option>
+                                    <option value="paving">Paving &amp; Surfacing</option>
+                                    <option value="courts">Court Construction</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea aria-label="Your Message" placeholder="Your Message" required=""></textarea>
+                            </div>
+                            <button aria-label="Send Message" class="btn btn-red" style="width: 100%;"
+                                type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Section -->
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-container">
+                <div class="footer-col">
+                    <h3>4Set Civil Construction</h3>
+                    <p>Building high-quality, durable infrastructure that enhances communities and improves lives since
+                        2015.</p>
+                    <div class="social-icons">
+                        <a aria-label="Follow us on Facebook" href="https://www.facebook.com/share/15aJpiG4gy/"
+                            target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a aria-label="Contact via WhatsApp"
+                            href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                            target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a aria-label="Follow us on Instagram" href="https://instagram.com/4set_construction"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Road Construction</a></li>
+                        <li><a href="#">Asphalt &amp; Tar Services</a></li>
+                        <li><a href="#">Paving &amp; Surfacing</a></li>
+                        <li><a href="#">Court Construction</a></li>
+                        <li><a href="#">Infrastructure Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for project updates and industry insights.</p>
+                    <form>
+                        <input aria-label="Your Email" placeholder="Your Email"
+                            style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: none;"
+                            type="email" />
+                        <button aria-label="Subscribe" class="btn" style="width: 100%;" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>©4Set Civil Construction. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- ...script... -->
+        <script src="script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const faqItems = document.querySelectorAll('.faq-item');
+
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+
+                    question.addEventListener('click', () => {
+                        // Close all other items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+
+                        // Toggle current item
+                        item.classList.toggle('active');
+                    });
+                });
+
+                // Open first question by default
+                if (faqItems.length > 0) {
+                    faqItems[0].classList.add('active');
+                }
+            });
+        </script>
+        <!-- WhatsApp Floating Button -->
+        <a aria-label="Contact via WhatsApp" class="whatsapp-float"
+            href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+            target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="whatsapp-tooltip">
+            Contact us on WhatsApp!
+        </div>
+        <script
+            type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourdomain.com/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://yourdomain.com/service.html"}, {"@type": "ListItem", "position": 3, "name": "Road Construction", "item": "https://yourdomain.com/road-construction.html"}]}</script>
+    </body>
+
+</html>

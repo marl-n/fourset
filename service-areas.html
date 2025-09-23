@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Service Areas | 4Set Civil Construction</title>
+    <link href="img/logo-png.png" rel="icon" type="image/png" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap"
+      rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></a>
+    <style>
+      .section-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+        max-width: 1200px;
+        margin: auto;
+        gap: 40px;
+      }
+
+      .text-content {
+        flex: 1;
+      }
+
+      .tagline {
+        color: #cc0000;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+      }
+
+      .text-content h2 {
+        font-size: 2rem;
+        color: #003366;
+        margin-bottom: 25px;
+        line-height: 1.3;
+      }
+
+      .benefit {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+
+      .benefit strong {
+        color: #003366;
+      }
+
+      .checkmark {
+        color: #0073e6;
+        font-weight: bold;
+        margin-right: 8px;
+
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #cc0000;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        margin-top: 15px;
+      }
+
+      .cta-button:hover {
+        background: #990000;
+      }
+
+      .image-content {
+        flex: 1;
+      }
+
+      .image-content img {
+        width: 100%;
+
+        height: 100%;
+        border-radius: 2px;
+        object-fit: cover;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .section-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .image-content {
+          margin-top: 20px;
+        }
+      }
+
+      .service-section {
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 20px;
+      }
+
+      .service-section h2 {
+        font-size: 2rem;
+        color: #003366;
+        margin-bottom: 10px;
+      }
+
+      .service-section .underline {
+        width: 50px;
+        height: 4px;
+        background: #cc0000;
+        margin-bottom: 30px;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+      }
+
+      .service-card {
+        background: #fff;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .service-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .service-card h3 {
+        text-align: center;
+        padding: 15px;
+        font-size: 1.1rem;
+        color: #003366;
+        flex-grow: 1;
+      }
+
+      .service-card a {
+        display: block;
+        text-align: center;
+        background: #001f3f;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 0;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        position: relative;
+      }
+
+      .service-content {
+        padding: 15px;
+        flex-grow: 1;
+      }
+
+      .service-card a::before {
+        content: "■";
+        color: #cc0000;
+        margin-right: 8px;
+      }
+
+      .service-card a:hover {
+        background: #003366;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container header-container">
+        <a href="#home" class="logo">
+          <img src="img/logo.png" alt="4set-construction-logo">
+        </a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" onclick="return false;">Services <i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="service.html">All Services</a></li>
+                <li><a href="asphalt-and-tar-services.html">Asphalt Surfacing</a></li>
+                <li><a href="paving-and-surfacing.html">Paving & Surfacing</a></li>
+                <li><a href="courts-surfacing.html">Court Surfacing</a></li>
+                <li><a href="road-construction.html">Road Construction</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project-gallery.html">Projects</a></li>
+            <li><a href="service-areas.html" class="active">Service Areas</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Our Service Areas</h1>
+          <p>We've Got Gauteng and its Neighbours Covered</p>
+          <div class="hero-btns">
+            <a aria-label="Our Services" class="btn" href="#services">Our Services</a>
+            <a aria-label="Get a Free Quote" class="btn btn-red" href="#contact">Get a Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><span class="breadcrumb-separator">/</span></li>
+          <li aria-current="page" class="active"><a href="service-areas.html">Service Areas</a></li>
+        </ol>
+      </div>
+    </nav>
+    <section class="section-container">
+      <div class="text-content">
+        <p class="tagline">EXPERTISE THAT LASTS ACROSS ALL SURFACES</p>
+        <h2>Why Working With a Local Tar Surfacing Company Matters</h2>
+        <p class="benefit"><span class="checkmark">✔️</span><strong>Understanding Local Ground Conditions:</strong> From
+          residential driveways to commercial lots, we adapt solutions to fit soil, climate, and usage patterns for the
+          best results.</p>
+        <p class="benefit"><span class="checkmark">✔️</span><strong>Fast Project Turnaround:</strong> As a local team,
+          we mobilize quickly—reducing downtime and ensuring smooth completion of your surfacing projects.</p>
+        <p class="benefit"><span class="checkmark">✔️</span><strong>Built to Withstand Heavy Use &amp; Weather:</strong>
+          Our tar surfaces are engineered to resist vehicle traffic, rain, and sun exposure with minimal maintenance.
+        </p>
+        <a class="cta-button" href="#">GET A FREE QUOTE</a>
+      </div>
+      <div class="image-content">
+        <img alt="Tar Surfacing. Road Construction" src="img/section-driveways.jpg" />
+      </div>
+    </section>
+    <!-- Service Areas Section-->
+    <section class="service-section">
+      <h2>Service Areas</h2>
+      <div class="underline"></div>
+      <div class="service-grid">
+        <div class="service-card">
+          <img alt="Tar services in Sandton, paving in midrand" src="img/sandton-service.jpeg" />
+          <div class="service-content">
+            <h3>Sandton &amp; Midrand</h3>
+            <ul>
+              <li>Sandton, Morningside, Sunninghill, Fourways, Bryanston, Rivonia, Lonehill, Midrand, Waterfall,
+                Kyalami.</li>
+            </ul>
+          </div>
+          <a href="sandton-midrand.html">EXPLORE SERVICE AREA</a>
+        </div>
+        <div class="service-card">
+          <img alt="tar services in Johannesburg" src="img/johannesburg.avif" />
+          <div class="service-content">
+            <h3>Johannesburg North &amp; Randburg</h3>
+            <ul>
+              <li>Randburg, Ferndale, Blairgowrie, Northcliff, Linden, Cresta, North Riding, Cosmo City.</li>
+            </ul>
+          </div>
+          <a href="randburg.html">EXPLORE SERVICE AREA</a>
+        </div>
+        <div class="service-card">
+          <img alt="Johannesburg" src="img/johannesburg.avif" />
+          <div class="service-content">
+            <h3>Johannesburg South</h3>
+            <ul>
+              <li>Ormonde, Mondeor, Southgate, Winchester Hills, Kibler Park, Lenasia, Ennerdale, Eldorado Park,
+                Turffontein.</li>
+            </ul>
+          </div>
+          <a href="johannesburg-tar-services.html">EXPLORE SERVICE AREA</a>
+        </div>
+        <div class="service-card">
+          <img alt="Johannesburg" src="img/sandton-service.jpeg" />
+          <div class="service-content">
+            <h3>East Rand, Ekurhuleni</h3>
+            <ul>
+              <li>Kempton Park, Edenvale, Modderfontein, Tembisa, Greenstone, Glen Marais, Boksburg, Benoni, Germiston,
+                Brakpan, Springs, Nigel.</li>
+            </ul>
+          </div>
+          <a href="eastrand.html">EXPLORE SERVICE AREA</a>
+        </div>
+        <div class="service-card">
+          <img alt="Johannesburg" src="img/sandton-service.jpeg" />
+          <div class="service-content">
+            <h3>Pretoria &amp; Centurion (Tshwane South/Central)</h3>
+            <ul>
+              <li>Pretoria CBD, Hatfield, Arcadia, Brooklyn, Menlyn, Waterkloof, Centurion, Irene, Highveld</li>
+            </ul>
+          </div>
+          <a href="pretoria-centurion.html">EXPLORE SERVICE AREA</a>
+        </div>
+        <div class="service-card">
+          <img alt="Johannesburg" src="img/sandton-service.jpeg" />
+          <div class="service-content">
+            <h3>Pretoria North &amp; Townships (Tshwane North/East/West)</h3>
+            <ul>
+              <li>Akasia, Wonderpark, Sinoville, Montana, Soshanguve, Mabopane, Ga-Rankuwa, Mamelodi, Atteridgeville.
+              </li>
+            </ul>
+          </div>
+          <a href="pretoria-townships.html">EXPLORE SERVICE AREA</a>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <div class="container" id="contact" style="padding: 50px 20px; max-width: 1200px; margin: auto;">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Fill out the form below or reach us through the other contact methods.</p>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-details">
+            <div>
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Our Location:</h4>
+                <p>6540 Mmaba Crescent, Mooifontein 14-IR, Kempton Park, 1618, GA</p>
+              </div>
+            </div>
+            <div>
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h4>Phone:</h4>
+                <p>+27 73 509 0269 / +27 65 216 7759</p>
+              </div>
+            </div>
+            <div>
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email Address:</h4>
+                <p>foursetconstruction@gmail.com </p>
+              </div>
+            </div>
+            <div>
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Working Hours:</h4>
+                <p>Monday-Friday: 7:00 AM - 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+          <a class="map" href="service-areas.html"
+            style="height: 250px; background: url(img/service-area-gauteng.svg) center/cover  no-repeat; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; border: 1px solid var(--primary-red); text-decoration: none; color: var(--primary-blue); margin-top: 20px;">
+          </a>
+          <h6 style="padding-top: 5px; position: relative; align-items: center;">Our Service Area Map</h6>
+        </div>
+        <div class="contact-form">
+          <div class="contact-form">
+            <form action="https://formsubmit.co/marln.tsusa@gmail.com" id="contactForm" method="POST" target="_blank">
+              <div>
+                <input aria-label="Your Name" name="name" placeholder="Your Name" required="" type="text" />
+              </div>
+              <div>
+                <input aria-label="Your Email" name="email" placeholder="Your Email" required="" type="email" />
+              </div>
+              <div>
+                <input aria-label="Your Phone" name="phone" placeholder="Your Phone" type="tel" />
+              </div>
+              <div>
+                <select aria-label="Service" name="service" required="">
+                  <option disabled="" selected="" value="">Select Service</option>
+                  <option value="roads">Road Construction</option>
+                  <option value="tar driveways">Tar Surfacing</option>
+                  <option value="asphalt">Asphalt Services</option>
+                  <option value="paving">Paving &amp; Surfacing</option>
+                  <option value="courts">Court Construction</option>
+                  <option value="other">Other Inquiry</option>
+                </select>
+              </div>
+              <div>
+                <textarea
+                  aria-label="Briefly describe your inquiry. Please state your location and the size of the area to be worked on."
+                  name="message"
+                  placeholder="Briefly describe your inquiry. Please state your location and the size of the area to be worked on."
+                  required=""></textarea>
+              </div>
+              <button aria-label="Send Message" class="btn btn-red" style="width: 100%;" type="submit">Send
+                Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container footer-container">
+          <div class="footer-col">
+            <h3>4Set Civil Construction</h3>
+            <p>Building high-quality, durable infrastructure that enhances communities and improves lives since 2015.
+            </p>
+            <div class="social-icons">
+              <a aria-label="Follow us on Facebook" href="https://www.facebook.com/share/15aJpiG4gy/" target="_blank"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a aria-label="Contact via WhatsApp"
+                href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+              <a aria-label="Follow us on Instagram" href="https://instagram.com/4set_construction" target="_blank"><i
+                  class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Our Services</h3>
+            <ul class="footer-links">
+              <li><a href="road-construction.html">Road Construction</a></li>
+              <li><a href="asphalt-and-tar-services.html">Asphalt &amp; Tar Services</a></li>
+              <li><a href="paving-and-surfacing.html">Paving &amp; Surfacing</a></li>
+              <li><a href="courts-surfacing.html">Court Construction</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter for project updates and industry insights.</p>
+            <form>
+              <input aria-label="Your Email" placeholder="Your Email"
+                style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: none;"
+                type="email" />
+              <button aria-label="Subscribe" class="btn" style="width: 100%;" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="container">
+            <p>©4Set Civil Construction. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+      <!-- ...script... -->
+      <script src="script.js"></script>
+      <a aria-label="Contact via WhatsApp" class="whatsapp-float"
+        href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+        target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <div class="whatsapp-tooltip">
+        Contact us on WhatsApp!
+      </div>
+    </div>
+  </body>
+
+</html>

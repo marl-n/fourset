@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>4Set Civil Construction | Project Gallery</title>
+        <link href="img/logo-png.png" rel="icon" type="image/png" />
+        <link href="style.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap"
+            rel="stylesheet" />
+        <style>
+            h1 {
+                font-size: 2.8rem;
+                margin-bottom: 15px;
+                color: #2c3e50;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+                color: #7f8c8d;
+                max-width: 800px;
+                margin: 0 auto 30px;
+            }
+
+            .divider {
+                height: 4px;
+                width: 80px;
+                background: #e74c3c;
+                margin: 0 auto 30px;
+                border-radius: 2px;
+            }
+
+
+
+
+            .modal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9);
+                backdrop-filter: blur(10px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+                z-index: 1000;
+                padding: 20px;
+            }
+
+            .modal.open {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .modal-content {
+                position: relative;
+                max-width: 90%;
+                max-height: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .modal-img {
+                max-width: 100%;
+                max-height: 80vh;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+            }
+
+            .modal-caption {
+                color: white;
+                font-size: 1.4rem;
+                margin-top: 20px;
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            .close-btn {
+                position: absolute;
+                top: -40px;
+                right: -10px;
+                font-size: 2.5rem;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+                transition: color 0.3s ease;
+            }
+
+            .close-btn:hover {
+                color: #e74c3c;
+            }
+
+            .nav-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 3rem;
+                color: white;
+                background: rgba(0, 0, 0, 0.3);
+                border: none;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: background 0.3s ease;
+                z-index: 1001;
+            }
+
+            .nav-btn:hover {
+                background: rgba(0, 0, 0, 0.7);
+            }
+
+            .prev-btn {
+                left: 20px;
+            }
+
+            .next-btn {
+                right: 20px;
+            }
+
+            .counter {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                color: white;
+                font-size: 1.2rem;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 8px 15px;
+                border-radius: 20px;
+            }
+
+            @media (max-width: 768px) {
+                .gallery {
+                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                    gap: 15px;
+                }
+
+                .subtitle {
+                    font-size: 1rem;
+                }
+
+                .nav-btn {
+                    font-size: 2rem;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .modal-caption {
+                    font-size: 1.1rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .gallery {
+                    grid-template-columns: 1fr;
+                }
+
+                .nav-btn {
+                    font-size: 1.5rem;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .close-btn {
+                    top: -30px;
+                    right: 0;
+                    font-size: 2rem;
+                }
+            }
+
+            .filter-buttons {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-bottom: 30px;
+            }
+
+            .filter-btn {
+                padding: 12px 25px;
+                background: #3498db;
+                color: white;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .filter-btn:hover {
+                background: #2980b9;
+                transform: translateY(-2px);
+            }
+
+            .filter-btn.active {
+                background: #e74c3c;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <div class="container header-container">
+                <a href="#home" class="logo">
+                    <img src="img/logo.png" alt="4set-construction-logo">
+                </a>
+                <nav>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" onclick="return false;" class="active">Services <i
+                                    class="fas fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="service.html">All Services</a></li>
+                                <li><a href="asphalt-and-tar-services.html">Asphalt Surfacing</a></li>
+                                <li><a href="paving-and-surfacing.html">Paving & Surfacing</a></li>
+                                <li><a href="courts-surfacing.html">Court Surfacing</a></li>
+                                <li><a href="road-construction.html">Road Construction</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="project-gallery.html" class="active">Projects</a></li>
+                        <li><a href="service-areas.html">Service Areas</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Project Gallery</h1>
+                    <p>Explore our completed projects</p>
+
+                    <div class="hero-btns">
+                        <a href="#services" class="btn">Our Services</a>
+                        <a href="#contact" class="btn btn-red">Get a Free Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><span class="breadcrumb-separator">/</span></li>
+                    <li aria-current="page" class="active"><a href="project-gallery.html">Project Gallery</a></li>
+                </ol>
+            </div>
+        </nav>
+        <!-- Projects Gallery Section -->
+        <section class="projects section-padding" id="projects">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Projects</h2>
+                    <p>Explore our completed infrastructure projects across various sectors</p>
+                </div>
+                <div class="projects-filter">
+                    <button aria-label="All Projects" class="filter-btn active" data-filter="all">All Projects</button>
+                    <button aria-label="Roads" class="filter-btn" data-filter="roads">Roads</button>
+                    <button aria-label="Asphalt" class="filter-btn" data-filter="asphalt">Asphalt</button>
+                    <button aria-label="Paving" class="filter-btn" data-filter="paving">Paving</button>
+                    <button aria-label="Courts" class="filter-btn" data-filter="courts">Courts</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="roads">
+                        <div class="project-img">
+                            <img alt="Regional Road Upgrade" src="img/driveway-1.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Regional Road Upgrade</h3>
+                            <p>Complete reconstruction of 5km township road for local council</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="roads">
+                        <div class="project-img">
+                            <img alt="Regional Road Upgrade" src="img/driveway-1.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Regional Road Upgrade</h3>
+                            <p>Complete reconstruction of 5km township road for local council</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="roads">
+                        <div class="project-img">
+                            <img alt="Regional Road Upgrade" src="img/driveway-1.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Regional Road Upgrade</h3>
+                            <p>Complete reconstruction of 5km township road for local council</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="asphalt">
+                        <div class="project-img">
+                            <img alt="Industrial Park Asphalt" src="img/driveway-2.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Industrial Park Asphalt</h3>
+                            <p>Large-scale asphalt paving for industrial facility parking and access roads</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="asphalt">
+                        <div class="project-img">
+                            <img alt="Industrial Park Asphalt" src="img/driveway-2.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Industrial Park Asphalt</h3>
+                            <p>Large-scale asphalt paving for industrial facility parking and access roads</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="asphalt">
+                        <div class="project-img">
+                            <img alt="Industrial Park Asphalt" src="img/driveway-2.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Industrial Park Asphalt</h3>
+                            <p>Large-scale asphalt paving for industrial facility parking and access roads</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="paving">
+                        <div class="project-img">
+                            <img alt="University Walkways" src="img/paving-near-me-1.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>University Walkways</h3>
+                            <p>Brick paving installation throughout university campus</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="paving">
+                        <div class="project-img">
+                            <img alt="University Walkways" src="img/paving-near-me-1.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>University Walkways</h3>
+                            <p>Brick paving installation throughout university campus</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="paving">
+                        <div class="project-img">
+                            <img alt="University Walkways" src="img/paving-near-me-1.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>University Walkways</h3>
+                            <p>Brick paving installation throughout university campus</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="paving">
+                        <div class="project-img">
+                            <img alt="University Walkways" src="img/paving-near-me-1.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>University Walkways</h3>
+                            <p>Brick paving installation throughout university campus</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="courts">
+                        <div class="project-img">
+                            <img alt="Community Sports Court" src="img/tennis-court.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Community Sports Court</h3>
+                            <p>Construction of multi-sport court complex for local community center</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="courts">
+                        <div class="project-img">
+                            <img alt="Community Sports Court" src="img/tennis-court.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Community Sports Court</h3>
+                            <p>Construction of multi-sport court complex for local community center</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="courts">
+                        <div class="project-img">
+                            <img alt="Community Sports Court" src="img/tennis-court.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Community Sports Court</h3>
+                            <p>Construction of multi-sport court complex for local community center</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="courts">
+                        <div class="project-img">
+                            <img alt="Community Sports Court" src="img/tennis-court.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Community Sports Court</h3>
+                            <p>Construction of multi-sport court complex for local community center</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="courts">
+                        <div class="project-img">
+                            <img alt="Community Sports Court" src="img/tennis-court.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Community Sports Court</h3>
+                            <p>Construction of multi-sport court complex for local community center</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="roads">
+                        <div class="project-img">
+                            <img alt="Farm Access Roads" src="img/asphalt.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Farm Access Roads</h3>
+                            <p>Gravel road network for agricultural property access</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="asphalt">
+                        <div class="project-img">
+                            <img alt="Residential Driveways" src="img/aspalt-speed bump.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Residential Driveways</h3>
+                            <p>Premium asphalt driveways for residential development</p>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="asphalt">
+                        <div class="project-img">
+                            <img alt="Residential Driveways" src="img/aspalt-speed bump.jpg"
+                                style="width:100%;height:100%;object-fit:cover;" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Residential Driveways</h3>
+                            <p>Premium asphalt driveways for residential development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal Structure -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <button aria-label="×" class="close-btn" id="closeBtn">×</button>
+                <img alt="Project Image" class="modal-img" id="modalImg" src="" />
+                <div class="modal-caption" id="modalCaption"></div>
+                <button aria-label="❮" class="nav-btn prev-btn" id="prevBtn">❮</button>
+                <button aria-label="❯" class="nav-btn next-btn" id="nextBtn">❯</button>
+                <div class="counter" id="counter">1/6</div>
+            </div>
+        </div>
+        <!--- Call to Action ---->
+        <section class="cta">
+            <h1>Get Started With Your Project Right Now</h1>
+            <a class="cta-btn" href="#contact">CONTACT US</a>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section-padding" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Ready to start your construction project? Get in touch with our team</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-details">
+                            <div>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Our Location</h4>
+                                    <p>6540 Mmaba Crescent, Mooifontein 14-IR, Kempton Park, 1618, GA</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+27 73 509 0269</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Address</h4>
+                                    <p>4setconstruction@gmail.com </p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Working Hours</h4>
+                                    <p>Monday-Friday: 7:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map"
+                            style="height: 250px; background-color: var(--light-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-blue);">
+                            <i class="fas fa-map-marked-alt" style="font-size: 2rem; margin-right: 15px;"></i>
+                            <span>Our Service Area Map</span>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div>
+                                <input aria-label="Your Name" placeholder="Your Name" required="" type="text" />
+                            </div>
+                            <div>
+                                <input aria-label="Your Email" placeholder="Your Email" required="" type="email" />
+                            </div>
+                            <div>
+                                <input aria-label="Your Phone" placeholder="Your Phone" type="tel" />
+                            </div>
+                            <div>
+                                <select required="">
+                                    <option disabled="" selected="" value="">Select Service</option>
+                                    <option value="roads">Road Construction</option>
+                                    <option value="tar driveways">Tar Surfacing</option>
+                                    <option value="asphalt">Asphalt Services</option>
+                                    <option value="paving">Paving &amp; Surfacing</option>
+                                    <option value="courts">Court Construction</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea aria-label="Your Message" placeholder="Your Message" required=""></textarea>
+                            </div>
+                            <button aria-label="Send Message" class="btn btn-red" style="width: 100%;"
+                                type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-container">
+                <div class="footer-col">
+                    <h3>4Set Civil Construction</h3>
+                    <p>Building high-quality, durable infrastructure that enhances communities and improves lives since
+                        2015.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Road Construction</a></li>
+                        <li><a href="#">Asphalt &amp; Tar Services</a></li>
+                        <li><a href="#">Paving &amp; Surfacing</a></li>
+                        <li><a href="#">Court Construction</a></li>
+                        <li><a href="#">Infrastructure Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for project updates and industry insights.</p>
+                    <form>
+                        <input aria-label="Your Email" placeholder="Your Email"
+                            style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: none;"
+                            type="email" />
+                        <button aria-label="Subscribe" class="btn" style="width: 100%;" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>©4Set Civil Construction. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- ...script... -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                const projectCards = document.querySelectorAll('.project-card');
+                const modal = document.getElementById('modal');
+                const modalImg = document.getElementById('modalImg');
+                const modalCaption = document.getElementById('modalCaption');
+                const closeBtn = document.getElementById('closeBtn');
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                const counter = document.getElementById('counter');
+                let currentIndex = 0;
+                let filteredItems = Array.from(projectCards);
+
+                // Filter functionality
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                        const filter = this.getAttribute('data-filter');
+                        filteredItems = filter === 'all' ? Array.from(projectCards) : Array.from(projectCards).filter(card =>
+                            card.getAttribute('data-category') === filter);
+                        projectCards.forEach(card => card.style.display = 'none');
+                        filteredItems.forEach(card => card.style.display = 'block');
+                        currentIndex = 0;
+                        updateCounter();
+                    });
+                });
+
+                // Open modal
+                projectCards.forEach((card, index) => {
+                    card.addEventListener('click', function () {
+                        currentIndex = filteredItems.indexOf(card);
+                        openModal(card);
+                    });
+                });
+                function openModal(card) {
+                    const img = card.querySelector('img');
+                    modalImg.src = img.src;
+                    modalCaption.textContent = card.querySelector('h3').textContent + ' - ' + card.querySelector('p').textContent;
+                    modal.classList.add('open');
+                    updateCounter();
+                }
+                // Close modal
+                closeBtn.addEventListener('click', function () {
+                    modal.classList.remove('open');
+                });
+                window.addEventListener('click', function (e) {
+                    if (e.target === modal) {
+                        modal.classList.remove('open');
+                    }
+                });
+                // Navigate modal
+                prevBtn.addEventListener('click', function () {
+                    currentIndex = (currentIndex - 1 + filteredItems.length) % filteredItems.length;
+                    openModal(filteredItems[currentIndex]);
+                });
+                nextBtn.addEventListener('click', function () {
+                    currentIndex = (currentIndex + 1) % filteredItems.length;
+                    openModal(filteredItems[currentIndex]);
+                });
+                function updateCounter() {
+                    if (filteredItems.length === 0) {
+                        counter.textContent = '0/0';
+                    } else {
+                        counter.textContent = `${currentIndex + 1}/${filteredItems.length}`;
+                    }
+                }
+                updateCounter();
+            });
+        </script>
+        <script src="script.js"></script>
+    </body>
+
+</html>

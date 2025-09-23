@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>4Set Construction | Services</title>
+    <link href="img/logo-png.png" rel="icon" type="image/png" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap"
+      rel="stylesheet" />
+    <style>
+      .faq-title {
+        text-align: center;
+        margin: 30px 0 30px 0;
+      }
+
+      .my-para {
+        margin: 0;
+        padding: 5px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        color: var(--primary-red);
+      }
+
+      .faq-head {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        color: var(--text-color);
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+
+      .my-accordion {
+        width: min(90%, 900px);
+        margin: 40px auto;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(228, 86, 86, 0.08);
+        backdrop-filter: blur(2px);
+      }
+
+      .my-accordion .accordion-item+.accordion-item {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .my-accordion .accordion-header {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        text-align: left;
+        background: transparent;
+        color: var(--primary-red);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.25s ease;
+        font-size: 1rem;
+      }
+
+      .my-accordion .accordion-header:hover {
+        background: rgba(255, 0, 0, 0.04);
+      }
+
+      .my-accordion .accordion-header:focus-visible {
+        outline: 2px solid #093461;
+        outline-offset: 2px;
+      }
+
+      .my-accordion .icon {
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(-45deg);
+        transition: transform 0.25s ease;
+        margin-left: 0.5rem;
+      }
+
+      .my-accordion .accordion-panel {
+        overflow: hidden;
+        max-height: 0;
+        padding: 0 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        color: #00000082;
+        transition: max-height 0.35s ease, padding 0.25s ease;
+      }
+
+      .my-accordion .accordion-panel p {
+        margin: 0.9rem 0;
+        line-height: 1.6;
+        color: #093461;
+      }
+
+      /* Expanded state */
+      .my-accordion .accordion-header[aria-expanded="true"]+.accordion-panel {
+        padding: 1rem;
+      }
+
+      .my-accordion .accordion-header[aria-expanded="true"] .icon {
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container header-container">
+        <a href="#home" class="logo">
+          <img src="img/logo.png" alt="4set-construction-logo">
+        </a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" onclick="return false;" class="active">Services <i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="service.html">All Services</a></li>
+                <li><a href="asphalt-and-tar-services.html">Asphalt Surfacing</a></li>
+                <li><a href="paving-and-surfacing.html">Paving & Surfacing</a></li>
+                <li><a href="courts-surfacing.html">Court Surfacing</a></li>
+                <li><a href="road-construction.html">Road Construction</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project-gallery.html">Projects</a></li>
+            <li><a href="service-areas.html">Service Areas</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Our Services</h1>
+          <p>From Steep Slopes to Long Lanes—<br />We've Got You Covered</p>
+          <div class="hero-btns">
+            <a aria-label="Get a Free Quote" class="btn btn-red" href="#contact">Get a Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><span class="breadcrumb-separator">/</span></li>
+          <li aria-current="page" class="active"><a href="service.html">Services</a></li>
+
+
+
+        </ol>
+      </div>
+    </nav>
+    <!-- Popular Services Section -->
+    <section class="popular-services-section">
+      <div class="popular-services-container">
+        <div class="popular-services-left">
+          <h4 style="color: #fff; font-weight: 500; margin-bottom: 10px;">OUR MOST POPULAR</h4>
+          <h2 style="color: #e53935; font-weight: 700; font-size: 2.2rem; margin-bottom: 0;">CIVIL CONSTRUCTION</h2>
+          <h2 style="color: #fff; font-weight: 700; font-size: 2.2rem;">SERVICES</h2>
+        </div>
+        <div class="popular-services-right">
+          <div class="service-icon-block">
+            <i class="fas fa-road"></i>
+            <p>Road Construction</p>
+          </div>
+          <div class="service-icon-block">
+            <i class="fas fa-th-large"></i>
+            <p>Paving &amp; Surfacing</p>
+          </div>
+          <div class="service-icon-block">
+            <i class="fas fa-tools"></i>
+            <p>Asphalt &amp; Tar Services</p>
+          </div>
+          <div class="service-icon-block">
+            <i class="fas fa-basketball-ball"></i>
+            <p>Court Construction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services section-padding" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>Comprehensive civil construction solutions for homeowners, businesses, and councils </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-img">
+              <img alt="Tar Driveways" src="img/asphalt-bkgrnd.jpg" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <div class="service-content">
+              <h3>Asphalt &amp; Tar Services</h3>
+              <ul>
+                <li>Asphalt Driveways &amp; Parking Lots</li>
+                <li>Tar Surfacing &amp; Chip and Spray</li>
+                <li>Asphalt Repairs &amp; Resurfacing</li>
+                <li>Slurry Seals &amp; Maintenance</li>
+              </ul>
+              <div class="buttons-container">
+                <a aria-label="Learn More" class="btn primary-btn" href="asphalt-and-tar-services.html">Learn More</a>
+                <a aria-label="Get Quote" class="btn secondary-btn" href="#contact"
+                  style=" background: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); height: 35px; display: flex; align-items: center; justify-content: center;">Get
+                  Quote</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-img">
+              <img alt="Tar Driveways" src="img/tar-backgrnd.jpg" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <div class="service-content">
+              <h3>Road &amp; Infrastructure</h3>
+              <ul>
+                <li>Gravel, Farm &amp; Entrance Roads</li>
+                <li>Council Road Repairs &amp; Maintenance</li>
+                <li>Township &amp; Industrial Area Roads</li>
+                <li>Road Construction &amp; Upgrades</li>
+              </ul>
+              <div class="buttons-container">
+                <a aria-label="Learn More" class="btn primary-btn" href="road-construction.html">Learn More</a>
+                <a aria-label="Get Quote" class="btn secondary-btn" href="#contact"
+                  style=" background: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); height: 35px; display: flex; align-items: center; justify-content: center;">Get
+                  Quote</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-img">
+              <img alt="Tar Driveways" src="img/paving-bkgrnd.jpg" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <div class="service-content">
+              <h3>Paving &amp; Surfacing</h3>
+              <ul>
+                <li>Sidewalks &amp; Walkways</li>
+                <li>Brick Paving &amp; Hardscaping</li>
+                <li>Kerb Lowering &amp; Modifications</li>
+                <li>Parking Lot Line Marking</li>
+              </ul>
+              <div class="buttons-container">
+                <a aria-label="Learn More" class="btn primary-btn" href="paving-and-surfacing.html">Learn More</a>
+                <a aria-label="Get Quote" class="btn secondary-btn" href="#contact"
+                  style=" background: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); height: 35px; display: flex; align-items: center; justify-content: center;">Get
+                  Quote</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-img">
+              <img alt="Tar Driveways" src="img/tennis-bkg.jpg" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <div class="service-content">
+              <h3>Court Construction</h3>
+              <ul>
+                <li>Tennis Courts</li>
+                <li>Basketball Courts</li>
+                <li>Netball Courts</li>
+                <li>Volleyball Courts</li>
+              </ul>
+              <div class="buttons-container">
+                <a aria-label="Learn More" class="btn primary-btn" href="asphalt-and-tar-services.html">Learn More</a>
+                <a aria-label="Get Quote" class="btn secondary-btn" href="#contact"
+                  style=" background: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); height: 35px; display: flex; align-items: center; justify-content: center;">Get
+                  Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ section -->
+    <div class="accordion" id="accordion">
+      <div class="faq-title">
+        <p class="my-para">Frequently Asked Questions</p>
+        <h2 class="faq-head">Got Questions? We've Got The Answers.</h2>
+      </div>
+      <div aria-label="FAQ" class="my-accordion" id="myAccordion">
+        <section class="accordion-item">
+          <button aria-controls="panel1" aria-expanded="false"
+            aria-label="How Much Does Tar Driveway Installation Cost?" class="accordion-header" id="btn1">
+            How Much Does Tar Driveway Installation Cost?
+            <span aria-hidden="true" class="icon"></span>
+          </button>
+          <div aria-labelledby="btn1" class="accordion-panel" id="panel1" role="region">
+            <p>The cost of tar driveway installation varies based on factors such as size, location, and site
+              conditions. On average, prices range from R120 to R150 per square metre. For a precise quote, please
+              contact us with your project details.</p>
+          </div>
+        </section>
+        <section class="accordion-item">
+          <button aria-controls="panel2" aria-expanded="false" aria-label="What is Asphalt Surfacing Best For?"
+            class="accordion-header" id="btn2">
+            What is Asphalt Surfacing Best For?
+            <span aria-hidden="true" class="icon"></span>
+          </button>
+          <div aria-labelledby="btn2" class="accordion-panel" id="panel2" role="region">
+            <p>Asphalt surfacing is ideal for driveways, parking lots, roads, and pathways due to its durability, smooth
+              finish, and cost-effectiveness. It provides a strong surface that can withstand heavy traffic and various
+              weather conditions.</p>
+          </div>
+        </section>
+        <section class="accordion-item">
+          <button aria-controls="panel3" aria-expanded="false"
+            aria-label="What Is The Difference Between Tar And Asphalt Surfacing?" class="accordion-header" id="btn3">
+            What Is The Difference Between Tar And Asphalt Surfacing?
+            <span aria-hidden="true" class="icon"></span>
+          </button>
+          <div aria-labelledby="btn3" class="accordion-panel" id="panel3" role="region">
+            <p>Tar is a natural product derived from coal, while asphalt is a petroleum-based product. Tar is more
+              flexible and resistant to water damage, making it suitable for colder climates. Asphalt is more commonly
+              used due to its lower cost and ease of application.</p>
+          </div>
+        </section>
+        <section class="accordion-item">
+          <button aria-controls="panel4" aria-expanded="false"
+            aria-label="How Much Does Tar Driveway Installation Cost?" class="accordion-header" id="btn4">
+            How Much Does Tar Driveway Installation Cost?
+            <span aria-hidden="true" class="icon"></span>
+          </button>
+          <div aria-labelledby="btn4" class="accordion-panel" id="panel4" role="region">
+            <p>The cost of tar driveway installation varies based on factors such as size, location, and site
+              conditions. On average, prices range from R120 to R150 per square metre. For a precise quote, please
+              contact us with your project details.</p>
+          </div>
+        </section>
+        <section class="accordion-item">
+          <button aria-controls="panel5" aria-expanded="false"
+            aria-label="How Long Does It Take To Install A Tar Driveway?" class="accordion-header" id="btn5">
+            How Long Does It Take To Install A Tar Driveway?
+            <span aria-hidden="true" class="icon"></span>
+          </button>
+          <div aria-labelledby="btn5" class="accordion-panel" id="panel5" role="region">
+            <p>The installation of a tar driveway typically takes 1 to 5 days, depending on the size and complexity of
+              the project. This includes site preparation, laying the tar, and allowing it to cure properly</p>
+          </div>
+        </section>
+        <section class="accordion-item">
+          <button aria-controls="panel6" aria-expanded="false" aria-label="How Long Does Asphalt Surfacing Last?"
+            class="accordion-header" id="btn6">
+            How Long Does Asphalt Surfacing Last?
+            <span aria-hidden="true" class="icon"></span>
+          </button>
+          <div aria-labelledby="btn6" class="accordion-panel" id="panel6" role="region">
+            <p>Asphalt surfacing can last between 15 to 20 years with proper maintenance. Regular sealing and repairs
+              can extend its lifespan and keep it looking good.</p>
+          </div>
+        </section>
+        <section class="accordion-item">
+          <button aria-controls="panel7" aria-expanded="false" aria-label="Are There Different Types Of Tar Driveways?"
+            class="accordion-header" id="btn7">
+            Are There Different Types Of Tar Driveways?
+            <span aria-hidden="true" class="icon"></span>
+          </button>
+          <div aria-labelledby="btn7" class="accordion-panel" id="panel7" role="region">
+            <p>Yes, there are different types of tar driveways, including traditional tar and chip, tar and gravel, and
+              tar macadam. Each type offers different aesthetics and performance characteristics.</p>
+          </div>
+        </section>
+      </div>
+      <script>
+        // Paste the JavaScript from section 3 above here
+        (function () {
+          // Guard: only run if the accordion exists on the page
+          var accordion = document.getElementById('myAccordion');
+          if (!accordion) return;
+
+          // Optional: single-open behavior
+          var allowMultiple = false;
+
+          var headers = accordion.querySelectorAll('.accordion-header');
+          headers.forEach(function (header) {
+            header.addEventListener('click', function () {
+              var expanded = header.getAttribute('aria-expanded') === 'true';
+
+              // Collapse others if single-open requirement
+              if (!allowMultiple) {
+                headers.forEach(function (h) {
+                  if (h !== header) {
+                    h.setAttribute('aria-expanded', 'false');
+                    var otherPanel = document.getElementById(h.getAttribute('aria-controls'));
+                    if (otherPanel) {
+                      otherPanel.style.maxHeight = null;
+                    }
+                  }
+                });
+              }
+
+              // Toggle this one
+              header.setAttribute('aria-expanded', String(!expanded));
+              var panel = document.getElementById(header.getAttribute('aria-controls'));
+              if (panel) {
+                if (!expanded) {
+                  panel.style.maxHeight = panel.scrollHeight + 'px';
+                } else {
+                  panel.style.maxHeight = null;
+                }
+              }
+            });
+
+            // Initialize panels that are pre-expanded in markup
+            var initPanel = document.getElementById(header.getAttribute('aria-controls'));
+            if (header.getAttribute('aria-expanded') === 'true' && initPanel) {
+              initPanel.style.maxHeight = initPanel.scrollHeight + 'px';
+            }
+          });
+        })();
+      </script>
+    </div>
+    <!--- End of FAQ Section ---->
+    <!-----testimonials----->
+    <section class="testimonials">
+      <h1>What Your Neighbours Say About Us</h1>
+      <div class="row">
+        <div class="testimonial-col">
+          <!-----user image----->
+          <div>
+            <p><sup><i class="fa-duotone fa-solid fa-quote-left fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sup>The driveway work done
+              by 4Set just last month - simply marvelous, I must say. The crew was so professional, prompt and tidy. But
+              what I truly appreciated was their clear communication, no complicated lingo, just straight explanations.
+              The end result is not only functional, but it's elevated our entire property's appearance. Couldn't be
+              happier! I'd recommend 4Set to anyone in a heartbeat. Superb work all around. I'd recommend 4Set to anyone
+              in a heartbeat. Superb work all around.<sub><i class="fa-duotone fa-solid fa-quote-right fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sub>
+            </p>
+            <h3>Victor. H</h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+        </div>
+        <div class="testimonial-col"><!-----user image----->
+          <div>
+            <p><sup><i class="fa-duotone fa-solid fa-quote-left fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sup>Managing a commercial
+              property means dealing with all sorts of contractors, but 4Set stands out. They redid our parking lot and
+              the entrance paving, and the difference is night and day. They worked around our operating hours to avoid
+              disrupting tenants, stuck to the timeline, and the finish is flawless. Even months later, no cracks or
+              issues. They’re responsive, thorough, and actually care about their work. A rare find.<sub><i
+                  class="fa-duotone fa-solid fa-quote-right fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sub>
+            <h3>Carlton. K</h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-col">
+          <!-----user image----->
+          <div>
+            <p><sup><i class="fa-duotone fa-solid fa-quote-left fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sup>Had 4Set do our backyard
+              patio with interlock paving, and we couldn't be happier. The crew was tidy, worked efficiently, and the
+              end result is both beautiful and solid—no wonky tiles or uneven surfaces. It’s been through two seasons of
+              braais and kids running around, and it still looks brand new. Really glad we went with them.<sub><i
+                  class="fa-duotone fa-solid fa-quote-right fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sub>
+            <h3>Lucy. T</h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--- Call to Action ---->
+    <section class="cta">
+      <h1>Ready to Get Started?<br />Contact us today for a free quote and consultation!</h1>
+      <a class="cta-btn" href="#services">CONTACT US</a>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Ready to start your construction project? Get in touch with our team</p>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <div class="contact-details">
+              <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Our Location</h4>
+                  <p>6540 Mmaba Crescent, Mooifontein 14-IR, Kempton Park, 1618, GA</p>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+27 65 216 7759</p>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email Address</h4>
+                  <p>4setconstruction@gmail.com </p>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Working Hours</h4>
+                  <p>Monday-Friday: 7:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <div class="map"
+              style="height: 250px; background-color: var(--light-blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--primary-blue);">
+              <i class="fas fa-map-marked-alt" style="font-size: 2rem; margin-right: 15px;"></i>
+              <span>Our Service Area Map</span>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div>
+                <input aria-label="Your Name" placeholder="Your Name" required="" type="text" />
+              </div>
+              <div>
+                <input aria-label="Your Email" placeholder="Your Email" required="" type="email" />
+              </div>
+              <div>
+                <input aria-label="Your Phone" placeholder="Your Phone" type="tel" />
+              </div>
+              <div>
+                <select required="">
+                  <option disabled="" selected="" value="">Select Service</option>
+                  <option value="roads">Road Construction</option>
+                  <option value="tar driveways">Tar Surfacing</option>
+                  <option value="asphalt">Asphalt Services</option>
+                  <option value="paving">Paving &amp; Surfacing</option>
+                  <option value="courts">Court Construction</option>
+                  <option value="other">Other Inquiry</option>
+                </select>
+              </div>
+              <div>
+                <textarea aria-label="Your Message" placeholder="Your Message" required=""></textarea>
+              </div>
+              <button aria-label="Send Message" class="btn btn-red" style="width: 100%;" type="submit">Send
+                Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-container">
+        <div class="footer-col">
+          <h3>4Set Civil Construction</h3>
+          <p>Building high-quality, durable infrastructure that enhances communities and improves lives since 2015.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Our Services</h3>
+          <ul class="footer-links">
+            <li><a href="#">Road Construction</a></li>
+            <li><a href="#">Asphalt &amp; Tar Services</a></li>
+            <li><a href="#">Paving &amp; Surfacing</a></li>
+            <li><a href="#">Court Construction</a></li>
+            <li><a href="#">Infrastructure Repair</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="index.html/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter for project updates and industry insights.</p>
+          <form>
+            <input aria-label="Your Email" placeholder="Your Email"
+              style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: none;" type="email" />
+            <button aria-label="Subscribe" class="btn" style="width: 100%;" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <p>© 2023 4Set Civil Construction. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yourdomain.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://yourdomain.com/service.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Services",
+      "item": "https://yourdomain.com/service.html"
+    }
+  ]
+}</script>
+  </body>
+
+</html>

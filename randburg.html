@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tar Surfacing &amp; Pavings | 4Set Civil Construction</title>
+    <link href="img/logo-png.png" rel="icon" type="image/png" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap"
+      rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></a>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Your Construction Company",
+  "url": "https://yourwebsite.com",
+  "logo": "https://4setconstruction.co.za/img/logo.png",
+  "image": "https://4setconstruction.co.za/img/hero-img.jpg",
+  "description": "Professional tar surfacing, paving, and court construction services across Johannesburg, Pretoria, East Rand, and West Rand. Trusted contractors for residential, commercial, and municipal projects.",
+  "telephone": "+27-73-509-0269",
+  "email": "foursetconstruction@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6540 Mmaba Crescent, Mooifontein 14-IR, Kempton Park, 1618, GA",
+    "addressLocality": "Johannesburg",
+    "addressRegion": "Gauteng",
+    "postalCode": "2000",
+    "addressCountry": "South Africa"
+  },
+  "areaServed": [
+    "Johannesburg",
+    "Sandton",
+    "Randburg",
+    "Midrand",
+    "Fourways",
+    "Rosebank",
+    "Soweto",
+    "Bedfordview",
+    "Alberton",
+    "Kempton Park",
+    "Roodepoort",
+    "Pretoria",
+    "Centurion",
+    "Hatfield",
+    "Menlyn",
+    "Brooklyn",
+    "East Rand",
+    "Benoni",
+    "Boksburg",
+    "Brakpan",
+    "Edenvale",
+    "Germiston",
+    "Springs",
+    "West Rand",
+    "Krugersdorp",
+    "Randfontein",
+    "Roodepoort",
+    "Muldersdrift"
+  ],
+  "openingHours": "Mo-Fr 08:00-17:00",
+  "priceRange": "$$",
+  "sameAs": [
+    "https://facebook.com/yourcompany",
+    "https://instagram.com/yourcompany",
+    "https://linkedin.com/company/yourcompany"
+  ]
+}
+</script>
+    <style>
+      .section-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 40px;
+        max-width: 1200px;
+        margin: auto;
+        gap: 40px;
+      }
+
+      .image-content {
+        flex: 1;
+      }
+
+      .image-content img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .text-content {
+        flex: 1;
+      }
+
+      .text-content h1 {
+        font-size: 2rem;
+        color: #003366;
+        margin-bottom: 20px;
+        line-height: 1.3;
+      }
+
+      .text-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #cc0000;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background: #990000;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .section-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .image-content {
+          margin-bottom: 20px;
+        }
+      }
+
+      .cta-btn {
+        display: inline-block;
+        background: #c53030;
+        /* Red button */
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        background: #a81e1e;
+      }
+
+      /* ✅ Responsive for mobile */
+      @media (max-width: 768px) {
+        .intro-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .intro-list li {
+          justify-content: center;
+          text-align: left;
+        }
+      }
+
+      .why-section {
+        padding: 60px 20px;
+        background: #f9fafb;
+        /* Light gray background */
+      }
+
+      .why-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: stretch;
+        /* ✅ ensures equal height */
+      }
+
+      .why-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #333;
+      }
+
+      .why-subtitle {
+        color: #c53030;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .why-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .why-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+      }
+
+      .why-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+      }
+
+      .why-list i {
+        color: #2563eb;
+        font-size: 20px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      .why-list p {
+        margin: 0;
+      }
+
+      .why-image {
+        width: 100%;
+        height: 100%;
+        /* ✅ matches text height */
+      }
+
+      .why-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* ✅ fills container, crops if needed */
+        border-radius: 5px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      }
+
+      .cta-btn {
+        display: inline-block;
+        background: #c53030;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        background: #a81e1e;
+      }
+
+      /* ✅ Responsive */
+      @media (max-width: 768px) {
+        .why-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .why-image {
+          height: auto;
+          /* let image resize naturally on small screens */
+          order: -1;
+          /* puts image on top */
+        }
+
+        .why-image img {
+          height: auto;
+        }
+
+        .why-list li {
+          justify-content: center;
+          text-align: left;
+        }
+      }
+
+      .service-area {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-list {
+        flex: 1;
+        background: #f9f9f9;
+        padding: 30px;
+      }
+
+      .service-list h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #002855;
+      }
+
+      .service-list ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        gap: 12px;
+      }
+
+      .service-list li {
+        font-size: 1.1rem;
+        color: #002855;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .service-list i {
+        color: #e63946;
+        /* red markers */
+      }
+
+      .service-text {
+        flex: 1;
+        background: #002855;
+        /* dark blue */
+        color: #fff;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .service-text h3 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+      }
+
+      .service-text p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .service-area {
+          flex-direction: column;
+        }
+
+        .service-list ul {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container header-container">
+        <a class="logo" href="#home">
+          <img alt="4set-construction-logo" src="img/logo.png" />
+        </a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" onclick="return false;">Services <i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="service.html">All Services</a></li>
+                <li><a href="asphalt-and-tar-services.html">Asphalt Surfacing</a></li>
+                <li><a href="paving-and-surfacing.html">Paving &amp; Surfacing</a></li>
+                <li><a href="courts-surfacing.html">Court Surfacing</a></li>
+                <li><a href="road-construction.html">Road Construction</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project-gallery.html">Projects</a></li>
+            <li><a href="service-areas.html">Service Areas</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Reliable Tar Surfacing, Paving &amp; Court Construction in<span style="color: #cc0000;"> Randburg</span>
+          </h1>
+          <div class="hero-btns">
+            <a aria-label="Our Services" class="btn" href="#services">Our Services</a>
+            <a aria-label="Get a Free Quote" class="btn btn-red" href="#contact">Get a Free Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><span class="breadcrumb-separator">/</span></li>
+          <li><a href="service-areas.html">Service Areas</a></li>
+          <li><span class="breadcrumb-separator">/</span></li>
+          <li aria-current="page" class="active"><a href="randburg.html">Randburg</a></li>
+
+        </ol>
+      </div>
+    </nav>
+    <section class="section-container">
+      <!-- Left side: Image -->
+      <div class="image-content">
+        <img alt="Tar Surfacing and Paving" src="img/header.jpg" />
+      </div>
+      <!-- Right side: Text -->
+      <div class="text-content">
+        <h1>Get The Best Tar Surfacing &amp; Paving in<span style="color: #cc0000;"> Randburg, Gauteng</span></h1>
+        <p>
+          When it comes to tar surfacing and paving, hiring a trusted, honest professional to handle the job is in your
+          best interest.
+          That is why here at 4SET, we make it simple to resurface, repair, or install your driveway, parking lot, or
+          pathway.
+          Each 4SET technician is thoroughly trained, background checked, screened, and drug tested to ensure only the
+          highest-quality professionals work on your property.
+        </p>
+        <a class="cta-button" href="#contact">GET A FREE QUOTE</a>
+      </div>
+    </section>
+    <section class="services section-padding" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Services in<span style="color: #cc0000;"> Randburg</span></h2>
+          <p>Comprehensive civil construction solutions for homeowners and businesses.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-img">
+              <img alt="Tar Driveways" src="img/asphalt-bkgrnd.jpg" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <div class="service-content">
+              <h3>Asphalt &amp; Tar Services</h3>
+              <ul>
+                <li>Asphalt Driveways &amp; Parking Lots</li>
+                <li>Tar Surfacing &amp; Chip and Spray</li>
+                <li>Asphalt Repairs &amp; Resurfacing</li>
+                <li>Slurry Seals &amp; Maintenance</li>
+              </ul>
+              <div class="buttons-container">
+                <a aria-label="Learn More" class="btn primary-btn" href="asphalt-and-tar-services.html">Learn More</a>
+                <a aria-label="Get Quote" class="btn secondary-btn" href="#contact"
+                  style=" background: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); height: 35px; display: flex; align-items: center; justify-content: center;">Get
+                  Quote</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-img">
+              <img alt="Tar Driveways" src="img/tar-backgrnd.jpg" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <div class="service-content">
+              <h3>Road &amp; Infrastructure</h3>
+              <ul>
+                <li>Gravel, Farm &amp; Entrance Roads</li>
+                <li>Council Road Repairs &amp; Maintenance</li>
+                <li>Township &amp; Industrial Area Roads</li>
+                <li>Road Construction &amp; Upgrades</li>
+              </ul>
+              <div class="buttons-container">
+                <a aria-label="Learn More" class="btn primary-btn" href="road-construction.html">Learn More</a>
+                <a aria-label="Get Quote" class="btn secondary-btn" href="#contact"
+                  style=" background: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); height: 35px; display: flex; align-items: center; justify-content: center;">Get
+                  Quote</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-img">
+              <img alt="Tar Driveways" src="img/paving-bkgrnd.jpg" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <div class="service-content">
+              <h3>Paving &amp; Surfacing</h3>
+              <ul>
+                <li>Sidewalks &amp; Walkways</li>
+                <li>Brick Paving &amp; Hardscaping</li>
+                <li>Kerb Lowering &amp; Modifications</li>
+                <li>Parking Lot Line Marking</li>
+              </ul>
+              <div class="buttons-container">
+                <a aria-label="Learn More" class="btn primary-btn" href="paving-and-surfacing.html">Learn More</a>
+                <a aria-label="Get Quote" class="btn secondary-btn" href="#contact"
+                  style=" background: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); height: 35px; display: flex; align-items: center; justify-content: center;">Get
+                  Quote</a>
+              </div>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-img">
+              <img alt="Tar Driveways" src="img/tennis-bkg.jpg" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+            <div class="service-content">
+              <h3>Court Construction</h3>
+              <ul>
+                <li>Tennis Courts</li>
+                <li>Basketball Courts</li>
+                <li>Netball Courts</li>
+                <li>Volleyball Courts</li>
+              </ul>
+              <div class="buttons-container">
+                <a aria-label="Learn More" class="btn primary-btn" href="asphalt-and-tar-services.html">Learn More</a>
+                <a aria-label="Get Quote" class="btn secondary-btn" href="#contact"
+                  style=" background: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); height: 35px; display: flex; align-items: center; justify-content: center;">Get
+                  Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="why-section">
+      <div class="why-container">
+        <!-- Left Side: Text -->
+        <div class="why-content">
+          <p class="why-subtitle">Your Trusted Partner</p>
+          <h2 class="why-title">Why Choose Our Construction Services?</h2>
+          <ul class="why-list">
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <p><strong>Proven Experience:</strong> With years of expertise in tar surfacing, paving, and court
+                construction, we’ve delivered projects of all sizes successfully.</p>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <p><strong>High-Quality Materials:</strong> We use only premium-grade tar and paving products to ensure
+                long-lasting results for every project.</p>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <p><strong>Affordable &amp; Transparent Pricing:</strong> Our pricing is competitive and upfront—no hidden
+                costs or surprises.</p>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <p><strong>Customer Satisfaction:</strong> We pride ourselves on reliability, clear communication, and
+                delivering on time, every time.</p>
+            </li>
+          </ul>
+          <a class="cta-btn" href="/contact">Get Started Today</a>
+        </div>
+        <!-- Right Side: Image -->
+        <div class="why-image">
+          <img alt="Why Choose Us - Tar Surfacing" src="img/section-driveways.avif" />
+        </div>
+      </div>
+    </section>
+    <section class="service-area">
+      <div class="service-list">
+        <h2>Our Johannesburg North &amp; Randburg Service Areas</h2>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Randburg</li>
+          <li><i class="fas fa-map-marker-alt"></i> Ferndale</li>
+          <li><i class="fas fa-map-marker-alt"></i> Blairgowrie</li>
+          <li><i class="fas fa-map-marker-alt"></i> Northcliff</li>
+          <li><i class="fas fa-map-marker-alt"></i> Linden</li>
+          <li><i class="fas fa-map-marker-alt"></i> Cresta</li>
+          <li><i class="fas fa-map-marker-alt"></i> North Riding</li>
+          <li><i class="fas fa-map-marker-alt"></i> Cosmo City</li>
+        </ul>
+      </div>
+      <div class="service-text">
+        <h3 style="color: white;">Reliable Tar Surfacing &amp; Paving Services Across Gauteng</h3>
+        <p>We proudly serve homeowners, businesses, and institutions across the Randburg region, delivering quality tar
+          surfacing, paving, and court construction solutions.</p>
+      </div>
+    </section>
+    <!-----testimonials----->
+    <section class="testimonials">
+      <h1>What Your Neighbours Say About Us</h1>
+      <div class="row">
+        <div class="testimonial-col">
+          <!-----user image----->
+          <div>
+            <p><sup><i class="fa-duotone fa-solid fa-quote-left fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sup>The driveway work done
+              by 4Set just last month - simply marvelous, I must say. The crew was so professional, prompt and tidy. But
+              what I truly appreciated was their clear communication, no complicated lingo, just straight explanations.
+              The end result is not only functional, but it's elevated our entire property's appearance. Couldn't be
+              happier! I'd recommend 4Set to anyone in a heartbeat. Superb work all around. I'd recommend 4Set to anyone
+              in a heartbeat. Superb work all around.<sub><i class="fa-duotone fa-solid fa-quote-right fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sub>
+            </p>
+            <h3>Victor. H</h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+        </div>
+        <div class="testimonial-col"><!-----user image----->
+          <div>
+            <p><sup><i class="fa-duotone fa-solid fa-quote-left fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sup>Managing a commercial
+              property means dealing with all sorts of contractors, but 4Set stands out. They redid our parking lot and
+              the entrance paving, and the difference is night and day. They worked around our operating hours to avoid
+              disrupting tenants, stuck to the timeline, and the finish is flawless. Even months later, no cracks or
+              issues. They’re responsive, thorough, and actually care about their work. A rare find.<sub><i
+                  class="fa-duotone fa-solid fa-quote-right fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sub>
+            <h3>Carlton. K</h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-col">
+          <!-----user image----->
+          <div>
+            <p><sup><i class="fa-duotone fa-solid fa-quote-left fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sup>Had 4Set do our backyard
+              patio with interlock paving, and we couldn't be happier. The crew was tidy, worked efficiently, and the
+              end result is both beautiful and solid—no wonky tiles or uneven surfaces. It’s been through two seasons of
+              braais and kids running around, and it still looks brand new. Really glad we went with them.<sub><i
+                  class="fa-duotone fa-solid fa-quote-right fa-xl"
+                  style="--fa-primary-color: #2b59b2; --fa-secondary-color: #b20a00;"></i></sub>
+            <h3>Lucy. T</h3>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact section-padding" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>We’d love to hear from you! Fill out the form below or reach us through the other contact methods.</p>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <div class="contact-details">
+              <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Our Location:</h4>
+                  <p>6540 Mmaba Crescent, Mooifontein 14-IR, Kempton Park, 1618, GA</p>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h4>Phone:</h4>
+                  <p>+27 73 509 0269 / +27 65 216 7759</p>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email Address:</h4>
+                  <p>foursetconstruction@gmail.com </p>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Working Hours:</h4>
+                  <p>Monday-Friday: 7:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <a class="map" href="service-areas.html"
+              style="height: 250px; background: url(img/service-area-gauteng.svg) center/cover  no-repeat; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; border: 1px solid var(--primary-red); text-decoration: none; color: var(--primary-blue); margin-top: 20px;">
+            </a>
+            <h6 style="padding-top: 5px; position: relative; align-items: center;">Our Service Area Map</h6>
+          </div>
+          <div class="contact-form">
+            <div class="contact-form">
+              <form action="https://formsubmit.co/marln.tsusa@gmail.com" id="contactForm" method="POST" target="_blank">
+                <div>
+                  <input aria-label="Your Name" name="name" placeholder="Your Name" required="" type="text" />
+                </div>
+                <div>
+                  <input aria-label="Your Email" name="email" placeholder="Your Email" required="" type="email" />
+                </div>
+                <div>
+                  <input aria-label="Your Phone" name="phone" placeholder="Your Phone" type="tel" />
+                </div>
+                <div>
+                  <select aria-label="Service" name="service" required="">
+                    <option disabled="" selected="" value="">Select Service</option>
+                    <option value="roads">Road Construction</option>
+                    <option value="tar driveways">Tar Surfacing</option>
+                    <option value="asphalt">Asphalt Services</option>
+                    <option value="paving">Paving &amp; Surfacing</option>
+                    <option value="courts">Court Construction</option>
+                    <option value="other">Other Inquiry</option>
+                  </select>
+                </div>
+                <div>
+                  <textarea
+                    aria-label="Briefly describe your inquiry. Please state your location and the size of the area to be worked on."
+                    name="message"
+                    placeholder="Briefly describe your inquiry. Please state your location and the size of the area to be worked on."
+                    required=""></textarea>
+                </div>
+                <button aria-label="Send Message" class="btn btn-red" style="width: 100%;" type="submit">Send
+                  Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-container">
+        <div class="footer-col">
+          <h3>4Set Civil Construction</h3>
+          <p>Building high-quality, durable infrastructure that enhances communities and improves lives since 2015.</p>
+          <div class="social-icons">
+            <a aria-label="Follow us on Facebook" href="https://www.facebook.com/share/15aJpiG4gy/" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+            <a aria-label="Contact via WhatsApp"
+              href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+              target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a aria-label="Follow us on Instagram" href="https://instagram.com/4set_construction" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Our Services</h3>
+          <ul class="footer-links">
+            <li><a href="road-construction.html">Road Construction</a></li>
+            <li><a href="asphalt-and-tar-services.html">Asphalt &amp; Tar Services</a></li>
+            <li><a href="paving-and-surfacing.html">Paving &amp; Surfacing</a></li>
+            <li><a href="courts-surfacing.html">Court Construction</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter for project updates and industry insights.</p>
+          <form>
+            <input aria-label="Your Email" placeholder="Your Email"
+              style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: none;" type="email" />
+            <button aria-label="Subscribe" class="btn" style="width: 100%;" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <p>©4Set Civil Construction. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ...script... -->
+    <script src="script.js"></script>
+    <a aria-label="Contact via WhatsApp" class="whatsapp-float"
+      href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+      target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="whatsapp-tooltip">
+      Contact us on WhatsApp!
+    </div>
+    <script
+      type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourdomain.com/"}, {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://yourdomain.com/service-areas.html"}, {"@type": "ListItem", "position": 3, "name": "Randburg", "item": "https://yourdomain.com/randburg.html"}]}</script>
+  </body>
+
+</html>

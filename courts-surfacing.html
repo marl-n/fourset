@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" viewport-fit="cover" />
+        <title>Court Surfacing | 4Set Civil Construction</title>
+        <link href="img/logo-png.png" rel="icon" type="image/png" />
+        <link href="style.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;500;600&amp;display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;icon_names=front_loader"
+            rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></a>
+        </link>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+
+        }
+
+        /* wrapper styles */
+
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-blue);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .image-text-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background: white;
+            border-radius: 0 0 12px 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .image-container {
+            flex: 1;
+            min-width: 300px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 40px;
+            min-width: 300px;
+        }
+
+        .text-container h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .text-container p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #e53935;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .image-text-section {
+                flex-direction: column;
+            }
+
+            .image-container {
+                width: 100%;
+                max-height: 300px;
+            }
+
+            .text-container {
+                padding: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-container {
+                padding: 20px;
+            }
+
+            .text-container h3 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .btn:hover {
+            background-color: #b71c1c;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #e53935;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #b71c1c;
+        }
+
+        @media (max-width: 320px) {
+
+            .text-container p {
+                margin-right: 10px;
+                margin-bottom: 20px;
+                color: #555;
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            .text-container h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                color: #2c3e50;
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #183a6d;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .type-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .type-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .type-img {
+
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+
+        }
+
+        .type-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
+            border-radius: 0;
+        }
+
+        .type-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .type-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1565c0;
+        }
+
+        .type-content ul {
+            padding-left: 20px;
+            margin: 15px 0;
+            flex-grow: 1;
+        }
+
+        .type-content li {
+            margin-bottom: 8px;
+        }
+
+        .type-cta {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .type-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1565c0;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .type-btn:hover {
+            background-color: #0d47a1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Process Section */
+        .process {
+            background-color: #e3f2fd;
+            padding: 80px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .process-step i {
+            font-size: 2.5rem;
+            color: #1565c0;
+            margin-bottom: 20px;
+        }
+
+        .process-step h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .btn-light {
+            background-color: white;
+            color: #1565c0;
+        }
+
+        .btn-light:hover {
+            background-color: #f5f5f5;
+        }
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FAQ */
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .divider {
+            height: 4px;
+            width: 80px;
+            background: #e74c3c;
+            margin: 0 auto 30px;
+            border-radius: 2px;
+        }
+
+        .faq-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .faq-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-category {
+            margin-bottom: 40px;
+        }
+
+        .faq-category h2 {
+            color: #1565c0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e3f2fd;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #e3f2fd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #e3f2fd;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer p {
+            margin-bottom: 15px;
+        }
+
+        .faq-answer ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 8px;
+        }
+
+        .contact-cta {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: white;
+
+            margin-top: 40px;
+        }
+
+        .contact-cta h2 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+
+
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .faq-container {
+                padding: 20px;
+            }
+
+            .faq-question {
+                padding: 15px;
+            }
+        }
+
+        /* Court Types Section */
+        .court-types {
+            background-color: #e3f2fd;
+            padding: 80px 0;
+        }
+
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .type-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+
+
+        .type-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .type-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1565c0;
+        }
+
+        /* Surfacing Options Section */
+        .surfacing-options {
+            padding: 80px 0;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .option-card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .option-card i {
+            font-size: 2.5rem;
+            color: #1565c0;
+            margin-bottom: 20px;
+        }
+
+        .option-card h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: #e3f2fd;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #bbdefb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Process Section */
+        .process {
+            padding: 80px 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .process-step i {
+            font-size: 2.5rem;
+            color: #1565c0;
+            margin-bottom: 20px;
+        }
+
+        .process-step h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+    </style>
+
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <div class="container header-container">
+                <a href="#home" class="logo">
+                    <img src="img/logo.png" alt="4set-construction-logo">
+                </a>
+                <nav>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" onclick="return false;" class="active">Services <i
+                                    class="fas fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="service.html">All Services</a></li>
+                                <li><a href="asphalt-and-tar-services.html">Asphalt Surfacing</a></li>
+                                <li><a href="paving-and-surfacing.html">Paving & Surfacing</a></li>
+                                <li><a href="courts-surfacing.html">Court Surfacing</a></li>
+                                <li><a href="road-construction.html">Road Construction</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="project-gallery.html">Projects</a></li>
+                        <li><a href="service-areas.html">Service Areas</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Professional Court Construction Services</h1>
+                    <p>Expert court construction for tennis, basketball, netball, volleyball, and multi-sport facilities
+                    </p>
+                    <div class="hero-btns">
+                        <a aria-label="Get a Fast Quote" class="btn btn-red" href="#contact">Get a Fast Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><span class="breadcrumb-separator">/</span></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><span class="breadcrumb-separator">/</span></li>
+                    <li aria-current="page" class="active"><a href="service.html">Court Surfacing</a></li>
+
+                </ol>
+            </div>
+        </nav>
+        <!-- Service Section -->
+        <div class="container">
+            <div class="section-title">
+            </div>
+            <div class="image-text-section">
+                <div class="image-container">
+                    <img alt="court construction company near me" src="img/courts-bkg.jpg" />
+                </div>
+                <div class="text-container">
+                    <h3>Court Construction Services in Gauteng</h3>
+                    <p>We offer a wide range of court construction services in Gauteng, including new court
+                        construction, court maintenance, and rehabilitation. We provide top-notch court construction
+                        services tailored to your needs. From tennis courts, basketball courts, to multi-purpose sports
+                        facilities, we've got you covered.</p>
+                    <a aria-label="Learn More" class="btn" href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Services Sub-Sec -->
+        <section class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Court Construction Services</h2>
+                    <p>Specialized court construction solutions for schools, clubs, communities, and residential
+                        properties</p>
+                </div>
+                <div class="services-grid">
+                    <div class="type-card">
+                        <div class="type-img">
+                            <img alt="Tennis Court" src="img/tennis-bkg.jpg" />
+                        </div>
+                        <div class="type-content">
+                            <h3>Tennis Court Construction</h3>
+                            <p>Professional tennis court construction with various surface options</p>
+                            <ul>
+                                <li>Hard court (acrylic) surfaces</li>
+                                <li>Clay court construction</li>
+                                <li>Artificial grass tennis courts</li>
+                                <li>Post-tensioned concrete courts</li>
+                            </ul>
+                            <div class="type-cta">
+                                <a class="type-btn" href="#contact">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <img alt="Basketball Court" src="img/basketball-court.jpg" />
+                        </div>
+                        <div class="type-content">
+                            <h3>Basketball Court Construction</h3>
+                            <p>Regulation and custom basketball court construction</p>
+                            <ul>
+                                <li>Full and half-court construction</li>
+                                <li>Outdoor court options</li>
+                                <li>Professional-grade surfaces</li>
+                                <li>Multi-sport court integration</li>
+                            </ul>
+                            <div class="type-cta">
+                                <a class="type-btn" href="#contact">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <img alt="Netball &amp; Volleyball Courts" src="img/netball-volleyball-court.jpeg" />
+                        </div>
+                        <div class="type-content">
+                            <h3>Netball &amp; Volleyball Courts</h3>
+                            <p>Specialized courts for netball and volleyball</p>
+                            <ul>
+                                <li>Netball court construction</li>
+                                <li>Outdoor volleyball courts</li>
+                                <li>Netball court markings</li>
+                                <li>Multi-use court designs</li>
+                            </ul>
+                            <div class="type-cta">
+                                <a class="type-btn" href="#contact">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <img alt="multi-purpose court" src="img/green-tennis-court.jpeg" />
+                        </div>
+                        <div class="type-content">
+                            <h3>Multi-Sport Court Construction</h3>
+                            <p>Versatile courts designed for multiple sports</p>
+                            <ul>
+                                <li>Modular sport tile systems</li>
+                                <li>Multi-line marking for various sports</li>
+                                <li>Adaptable goal post systems</li>
+                                <li>Community recreation courts</li>
+                            </ul>
+                            <div class="type-cta">
+                                <a class="type-btn" href="#contact">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <img alt="Court Maintenance &amp; Resurfacing company near me" src="img/re-painting.jpeg" />
+                        </div>
+                        <div class="type-content">
+                            <h3>Court Maintenance &amp; Resurfacing</h3>
+                            <p>Comprehensive maintenance and resurfacing services</p>
+                            <ul>
+                                <li>Court resurfacing and repair</li>
+                                <li>Line remarking and repainting</li>
+                                <li>Surface cleaning and sealing</li>
+                                <li>Net post and fixture installation</li>
+                            </ul>
+                            <div class="type-cta">
+                                <a class="type-btn" href="#contact">Get Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Court Types Section -->
+        <section class="court-types">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Court Surface Options</h2>
+                    <p>We offer a variety of surface materials to meet different needs and budgets</p>
+                </div>
+                <div class="types-grid">
+                    <div class="type-card" style="box-shadow: none;">
+                        <div class="type-img">
+                            <img alt="Tennis Court" src="img/tennis-bkg.jpg" />
+                        </div>
+                        <div class="type-content">
+                            <h3>Acrylic Hard Courts</h3>
+                            <p>The professional standard for tennis courts, offering excellent playability, durability,
+                                and consistent bounce. Available in various colors and cushioning options.</p>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <img alt="artificial-grass" src="img/artificial-grass.jpeg" />
+                        </div>
+                        <div class="type-content">
+                            <h3>Artificial Grass</h3>
+                            <p>Low-maintenance synthetic turf that provides a natural playing experience. Excellent for
+                                tennis, multipurpose courts, and landscaping integration.</p>
+                        </div>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-img">
+                            <img alt="asphalt-court" src="img/asphalt-court.jpeg" />
+                        </div>
+                        <div class="type-content">
+                            <h3>Asphalt Courts</h3>
+                            <p>Cost-effective asphalt base with acrylic finishing. Durable and suitable for all weather
+                                conditions when properly maintained.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Surfacing Options Section -->
+        <section class="surfacing-options">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose Professional Court Construction?</h2>
+                    <p>Benefits of our expert court construction services</p>
+                </div>
+                <div class="options-grid">
+                    <div class="option-card">
+                        <i class="fas fa-ruler-combined"></i>
+                        <h3>Regulation Compliance</h3>
+                        <p>Courts built to official dimensions and specifications for competitive play</p>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safety Standards</h3>
+                        <p>Proper drainage, non-slip surfaces, and safe surrounding areas</p>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Longevity</h3>
+                        <p>Quality materials and construction techniques for years of use</p>
+                    </div>
+                    <div class="option-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Customization</h3>
+                        <p>Tailored solutions to fit your specific space, budget, and usage needs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Process Section -->
+        <section class="process">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Court Construction Process</h2>
+                    <p>From concept to completion, we follow a meticulous process</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3>Consultation &amp; Planning</h3>
+                        <p>We begin with a detailed assessment of your needs, space, and budget to create a customized
+                            plan.</p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-drafting-compass"></i>
+                        <h3>Design &amp; Layout</h3>
+                        <p>Our experts create precise designs considering drainage, orientation, and regulatory
+                            requirements.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="material-symbols-outlined"
+                            style="font-size: 60px; color: #1565c0;">front_loader</span>
+                        <h3>Site Preparation</h3>
+                        <p>Proper grading, base construction, and drainage systems are installed to ensure longevity.
+                        </p>
+                    </div>
+                    <div class="process-step">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Surface Installation</h3>
+                        <p>Expert installation of your chosen surface material with precision and attention to detail.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Court Construction FAQs</h2>
+                    <p>Answers to common questions about our court construction services</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does it take to construct a sports court?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The timeline varies based on court type, size, and site conditions. Generally, a standard
+                            tennis court takes 4-6 weeks from excavation to completion. Basketball courts typically take
+                            2-4 weeks, while multi-sport facilities may require 6-8 weeks. Complex projects or those
+                            requiring extensive site preparation may take longer.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What's the best surface for a multi-purpose court?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For multi-purpose courts, modular sports tiles or acrylic surfaces are often recommended.
+                            Modular tiles offer excellent shock absorption and can be used for various sports. Acrylic
+                            surfaces provide good durability and can be lined for multiple sports. The best choice
+                            depends on your primary use, budget, and maintenance preferences.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How much maintenance do sports courts require?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Maintenance requirements vary by surface type. Acrylic courts need occasional cleaning and
+                            resurfacing every 4-8 years. Modular tiles require minimal maintenance beyond occasional
+                            cleaning. Artificial grass needs brushing and occasional infill top-ups. We provide detailed
+                            maintenance guidelines for each court type we install.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can courts be installed on sloped surfaces?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we can construct courts on sloped terrain through proper grading and retaining wall
+                            systems. However, significant slope correction adds to the project cost and timeline. We
+                            assess each site individually and provide solutions that work with the natural topography
+                            while ensuring proper drainage and playability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2 style="color: white;">Ready to Build Your Sports Court?</h2>
+                <p>Contact us today for a free consultation and quote. Our team of court construction experts is ready
+                    to create the perfect sports facility for your needs.</p>
+                <a aria-label="Contact Us Today" class="btn btn-light" href="contact.html">Contact Us Today</a>
+            </div>
+        </section>
+        <!-- Three Step Process Section -->
+        <section class="three-step-process">
+            <div class="process-header">
+                <p class="process-subtitle">Our Simple Three Step Process</p>
+                <h2 class="process-title">Working With Us Is Easy As 1-2-3</h2>
+            </div>
+            <div class="process-content">
+                <div class="steps-list">
+                    <div class="step-tab active" data-step="1">
+                        <span class="step-tab-label">STEP</span>
+                        <span class="step-tab-number">1</span>
+                    </div>
+                    <div class="step-tab" data-step="2">
+                        <span class="step-tab-label">STEP</span>
+                        <span class="step-tab-number">2</span>
+                    </div>
+                    <div class="step-tab" data-step="3">
+                        <span class="step-tab-label">STEP</span>
+                        <span class="step-tab-number">3</span>
+                    </div>
+                </div>
+                <div class="step-details">
+                    <div class="step-info">
+                        <h3 class="step-title"></h3>
+                        <p class="step-desc"></p>
+                        <a aria-label="Contact via WhatsApp" class="step-btn"
+                            href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                            target="_blank"></a>
+                    </div>
+                    <div class="step-img-container">
+                        <img alt="Step Illustration" class="step-img" src="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Three Step Process Section -->
+        <!-- Contact Section -->
+        <section class="contact section-padding" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact 4Set Civil Construction in Gauteng</h2>
+                    <p>Looking for professional tar surfacing, paving, or road construction services in Gauteng? Get in
+                        touch
+                        with us today for a free, no-obligation quote.</p>
+                </div>
+
+                <div class="contact-container">
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-details">
+                            <div>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Our Location:</h4>
+                                    <p>6540 Mmaba Crescent, Mooifontein 14-IR, Kempton Park, 1618, Gauteng</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h4>Phone:</h4>
+                                    <p>+27 73 509 0269 / +27 65 216 7759</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Address:</h4>
+                                    <p>foursetconstruction@gmail.com</p>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Working Hours:</h4>
+                                    <p>Monday – Friday: 7:00 AM – 5:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Area Map -->
+                        <a href="service-areas.html" class="map"
+                            style="height: 250px; background: url(img/service-area-gauteng.svg) center/cover no-repeat; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; border: 1px solid var(--primary-red); text-decoration: none; color: var(--primary-blue); margin-top: 20px;">
+                        </a>
+                        <h6 style="padding-top: 5px; position: relative; align-items: center;">Our Service Area Map</h6>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <form id="contactForm" action="https://formsubmit.co/marln.tsusa@gmail.com" method="POST"
+                            target="_blank">
+                            <div>
+                                <input type="text" name="name" placeholder="Your Full Name" required>
+                            </div>
+                            <div>
+                                <input type="email" name="email" placeholder="Your Email Address" required>
+                            </div>
+                            <div>
+                                <input type="tel" name="phone" placeholder="Your Phone Number">
+                            </div>
+                            <div>
+                                <select name="service" required>
+                                    <option value="" disabled selected>Select a Service</option>
+                                    <option value="roads">Road Construction</option>
+                                    <option value="tar driveways">Tar Surfacing</option>
+                                    <option value="asphalt">Asphalt Services</option>
+                                    <option value="paving">Paving & Surfacing</option>
+                                    <option value="courts">Court Construction</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea name="message"
+                                    placeholder="Briefly describe your inquiry. Please include your location and the approximate size of the project area."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-red" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Section -->
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-container">
+                <div class="footer-col">
+                    <h3>4Set Civil Construction</h3>
+                    <p>Building high-quality, durable infrastructure that enhances communities and improves lives since
+                        2015.</p>
+                    <div class="social-icons">
+                        <a aria-label="Follow us on Facebook" href="https://www.facebook.com/share/15aJpiG4gy/"
+                            target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a aria-label="Contact via WhatsApp"
+                            href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                            target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a aria-label="Follow us on Instagram" href="https://instagram.com/4set_construction"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Road Construction</a></li>
+                        <li><a href="#">Asphalt &amp; Tar Services</a></li>
+                        <li><a href="#">Paving &amp; Surfacing</a></li>
+                        <li><a href="#">Court Construction</a></li>
+                        <li><a href="#">Infrastructure Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="type.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for project updates and industry insights.</p>
+                    <form>
+                        <input aria-label="Your Email" placeholder="Your Email"
+                            style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: none;"
+                            type="email" />
+                        <button aria-label="Subscribe" class="btn" style="width: 100%;" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>©4Set Civil Construction. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- ...script... -->
+        <script src="script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const faqItems = document.querySelectorAll('.faq-item');
+
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question');
+
+                    question.addEventListener('click', () => {
+                        // Close all other items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('active');
+                            }
+                        });
+
+                        // Toggle current item
+                        item.classList.toggle('active');
+                    });
+                });
+
+                // Open first question by default
+                if (faqItems.length > 0) {
+                    faqItems[0].classList.add('active');
+                }
+            });
+        </script>
+        <!-- WhatsApp Floating Button -->
+        <a aria-label="Contact via WhatsApp" class="whatsapp-float"
+            href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+            target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="whatsapp-tooltip">
+            Contact us on WhatsApp!
+        </div>
+        <script
+            type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourdomain.com/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://yourdomain.com/service.html"}, {"@type": "ListItem", "position": 3, "name": "Court Construction", "item": "https://yourdomain.com/courts-surfacing.html"}]}</script>
+    </body>
+
+</html>
