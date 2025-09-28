@@ -36,21 +36,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Header scroll effect
 const header = document.getElementById('header');
 
-// Track scroll position and update nav
-window.addEventListener('scroll', () => {
-    const heroSection = document.getElementById('home');
-    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-    if (window.scrollY > heroBottom - 70) {
-        showMinimalNav();
-    } else {
-        showFullNav();
-    }
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -329,7 +329,7 @@ header.scrolled {
 /* Hero Section */
 .hero {
     height: 90vh;
-    background: url('img/hero-img.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.416), rgba(0, 0, 0, 0.7)), url('project-img/header.avif') center/cover no-repeat;
     display: flex;
     align-items: center;
     text-align: center;
@@ -1197,11 +1197,11 @@ footer {
 }
 
 .popular-services-right {
-    flex: 2 1 600px;
+    flex: 2 1 300px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 32px 16px;
+    padding: 12px 16px;
     background: #f7f8fa;
     gap: 14px;
     flex-wrap: wrap;
@@ -1213,13 +1213,13 @@ footer {
     align-items: center;
     justify-content: flex-start;
     min-width: 140px;
-    margin: 12px 0;
+    margin: 6px 0;
 }
 
 .service-icon-block i {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #e53935;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
 }
 
 .service-icon-block p {
@@ -1338,7 +1338,7 @@ footer {
 .cta {
     margin: 100px auto;
     width: 80%;
-    background: linear-gradient(rgba(0, 0, 0, 0.416), rgba(0, 0, 0, 0.7)), url('img/asphalt-paving.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.416), rgba(0, 0, 0, 0.7)), url('project-img/header.avif') center/cover no-repeat;
     border-radius: 10px;
     text-align: center;
     padding: 100px 0;

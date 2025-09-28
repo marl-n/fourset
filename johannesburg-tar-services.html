@@ -5,8 +5,8 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Tar Surfacing &amp; Pavings | 4Set Civil Construction</title>
-    <link href="img/logo-png.png" rel="icon" type="image/png" />
+    <title>Johannesburg | 4Set Civil Construction</title>
+    <link href="project-img/logo-png.png" rel="icon" type="image/png">
     <link href="style.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <link
@@ -362,12 +362,12 @@
     <!-- Header -->
     <header id="header">
       <div class="container header-container">
-        <a class="logo" href="#home">
+        <a class="logo" href="index.html">
           <img alt="4set-construction-logo" src="img/logo.png" />
         </a>
         <nav>
           <ul class="nav-links" id="navLinks">
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
               <a href="#" onclick="return false;">Services <i class="fas fa-caret-down"></i></a>
               <ul class="dropdown-menu">
@@ -380,8 +380,8 @@
             </li>
             <li><a href="about.html">About</a></li>
             <li><a href="project-gallery.html">Projects</a></li>
-            <li><a href="service-areas.html">Service Areas</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="service-areas.html" class="active">Service Areas</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
           <div class="menu-toggle" id="menuToggle">
             <i class="fas fa-bars"></i>
@@ -418,7 +418,7 @@
     <section class="section-container">
       <!-- Left side: Image -->
       <div class="image-content">
-        <img alt="Tar Surfacing and Paving" src="img/header.jpg" />
+        <img alt="Tar Surfacing and Paving" src="project-img/header.avif" />
       </div>
       <!-- Right side: Text -->
       <div class="text-content">
@@ -431,7 +431,7 @@
           Each 4SET technician is thoroughly trained, background checked, screened, and drug tested to ensure only the
           highest-quality professionals work on your property.
         </p>
-        <a class="cta-button" href="#contact">GET A FREE QUOTE</a>
+        <a class="cta-button" href="contact.html">GET A FREE QUOTE</a>
       </div>
     </section>
     <section class="services section-padding" id="services">
@@ -443,7 +443,8 @@
         <div class="services-grid">
           <div class="service-card">
             <div class="service-img">
-              <img alt="Tar Driveways" src="img/asphalt-bkgrnd.jpg" style="width:100%;height:100%;object-fit:cover;" />
+              <img alt="Tar Driveways" src="project-img/asphalt-bkgrnd.avif"
+                style="width:100%;height:100%;object-fit:cover;" />
             </div>
             <div class="service-content">
               <h3>Asphalt &amp; Tar Services</h3>
@@ -463,7 +464,8 @@
           </div>
           <div class="service-card">
             <div class="service-img">
-              <img alt="Tar Driveways" src="img/tar-backgrnd.jpg" style="width:100%;height:100%;object-fit:cover;" />
+              <img alt="Tar Driveways" src="project-img/tar-backgrnd.avif"
+                style="width:100%;height:100%;object-fit:cover;" />
             </div>
             <div class="service-content">
               <h3>Road &amp; Infrastructure</h3>
@@ -483,7 +485,8 @@
           </div>
           <div class="service-card">
             <div class="service-img">
-              <img alt="Tar Driveways" src="img/paving-bkgrnd.jpg" style="width:100%;height:100%;object-fit:cover;" />
+              <img alt="Tar Driveways" src="project-img/paving-bkgrnd.avif"
+                style="width:100%;height:100%;object-fit:cover;" />
             </div>
             <div class="service-content">
               <h3>Paving &amp; Surfacing</h3>
@@ -503,7 +506,8 @@
           </div>
           <div class="service-card">
             <div class="service-img">
-              <img alt="Tar Driveways" src="img/tennis-bkg.jpg" style="width:100%;height:100%;object-fit:cover;" />
+              <img alt="Tar Driveways" src="project-img/tennis-bkg.avif"
+                style="width:100%;height:100%;object-fit:cover;" />
             </div>
             <div class="service-content">
               <h3>Court Construction</h3>
@@ -514,7 +518,7 @@
                 <li>Volleyball Courts</li>
               </ul>
               <div class="buttons-container">
-                <a aria-label="Learn More" class="btn primary-btn" href="asphalt-and-tar-services.html">Learn More</a>
+                <a aria-label="Learn More" class="btn primary-btn" href="courts-surfacing.html">Learn More</a>
                 <a aria-label="Get Quote" class="btn secondary-btn" href="#contact"
                   style=" background: transparent; color: var(--primary-red); border: 2px solid var(--primary-red); height: 35px; display: flex; align-items: center; justify-content: center;">Get
                   Quote</a>
@@ -552,7 +556,7 @@
                 delivering on time, every time.</p>
             </li>
           </ul>
-          <a class="cta-btn" href="/contact">Get Started Today</a>
+          <a class="cta-btn" href="contact.html">Get Started Today</a>
         </div>
         <!-- Right Side: Image -->
         <div class="why-image">
@@ -650,7 +654,7 @@
     <section class="contact section-padding" id="contact">
       <div class="container">
         <div class="section-title">
-          <h2>Contact 4Set Civil Construction in Gauteng</h2>
+          <h2>Contact Us</h2>
           <p>Looking for professional tar surfacing, paving, or road construction services in Gauteng? Get in touch with
             us
             today for a free, no-obligation quote.</p>
@@ -702,8 +706,16 @@
           <!-- Contact Form -->
           <div class="contact-form">
             <form id="contactForm" action="https://formsubmit.co/marln.tsusa@gmail.com" method="POST" target="_blank">
+              <input type="text" name="_honey" style="display:none">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
+              <input type="hidden" name="_subject" value="New Inquiry from 4Set Civil Construction Website">
+
               <div>
                 <input type="text" name="name" placeholder="Your Full Name" required>
+              </div>
+              <div>
+                <input type="text" name="location" placeholder="Your Location" required>
               </div>
               <div>
                 <input type="email" name="email" placeholder="Your Email Address" required>
@@ -736,51 +748,85 @@
     <!-- Footer -->
     <footer>
       <div class="container footer-container">
+
+        <!-- About -->
         <div class="footer-col">
           <h3>4Set Civil Construction</h3>
-          <p>Building high-quality, durable infrastructure that enhances communities and improves lives since 2015.</p>
+          <p>Building high-quality, durable infrastructure since 2015. We specialize in tar surfacing,
+            asphalt paving, road construction, and sports court surfacing.</p>
           <div class="social-icons">
-            <a aria-label="Follow us on Facebook" href="https://www.facebook.com/share/15aJpiG4gy/" target="_blank"><i
+            <a href="https://www.facebook.com/share/15aJpiG4gy/" target="_blank" aria-label="Follow us on Facebook"><i
                 class="fab fa-facebook-f"></i></a>
-            <a aria-label="Contact via WhatsApp"
-              href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
-              target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            <a aria-label="Follow us on Instagram" href="https://instagram.com/4set_construction" target="_blank"><i
+            <a href="https://wa.me/27735090269?text=Hello%204Set%20Civil%20Construction,%20I%20would%20like%20to%20inquire%20about%20your%20services"
+              target="_blank" aria-label="Contact via WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://instagram.com/4set_construction" target="_blank" aria-label="Follow us on Instagram"><i
                 class="fab fa-instagram"></i></a>
           </div>
         </div>
+
+        <!-- Services -->
         <div class="footer-col">
           <h3>Our Services</h3>
           <ul class="footer-links">
             <li><a href="road-construction.html">Road Construction</a></li>
-            <li><a href="asphalt-and-tar-services.html">Asphalt &amp; Tar Services</a></li>
-            <li><a href="paving-and-surfacing.html">Paving &amp; Surfacing</a></li>
+            <li><a href="asphalt-and-tar-services.html">Asphalt & Tar Surfacing</a></li>
+            <li><a href="paving-and-surfacing.html">Paving & Surfacing</a></li>
             <li><a href="courts-surfacing.html">Court Construction</a></li>
           </ul>
         </div>
+
+        <!-- Quick Links -->
         <div class="footer-col">
           <h3>Quick Links</h3>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="service.html">Services</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="project-gallery.html">Projects</a></li>
+            <li><a href="service-areas.html">Service Areas</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+        <!-- Newsletter -->
         <div class="footer-col">
-          <h3>Newsletter</h3>
-          <p>Subscribe to our newsletter for project updates and industry insights.</p>
+          <h3>Stay Updated</h3>
+          <p>Join our mailing list for the latest updates on <strong>tar surfacing, paving, and road construction
+              projects</strong>. Get expert tips, maintenance advice, and special offers straight to your
+            inbox.</p>
           <form>
-            <input aria-label="Your Email" placeholder="Your Email"
-              style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: none;" type="email" />
-            <button aria-label="Subscribe" class="btn" style="width: 100%;" type="submit">Subscribe</button>
+            <input type="email" placeholder="Enter your email address"
+              style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 4px; border: none;" required>
+            <button type="submit" class="btn" style="width: 100%;">Subscribe Now</button>
           </form>
         </div>
+
+        <!-- Service Areas -->
+        <div class="footer-col">
+          <h3>We Serve All of Gauteng and Surroundings</h3>
+          <p>Our tar surfacing, paving, and construction services are available throughout Gauteng and surrounding
+            areas, including:</p>
+          <ul class="footer-links">
+            <li>Pretoria</li>
+            <li>Centurion</li>
+            <li>Kempton Park</li>
+            <li>Midrand</li>
+            <li>Sandton</li>
+            <li>Benoni</li>
+            <li>Vereeniging</li>
+            <li>Klerksdorp</li>
+            <li>Rustenburg</li>
+            <li>Vanderbijlpark</li>
+            <li>Potchefstroom</li>
+          </ul>
+        </div>
+
       </div>
+
+
+
       <div class="copyright">
         <div class="container">
-          <p>©4Set Civil Construction. All Rights Reserved.</p>
+          <p>&copy;2025 4Set Civil Construction. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
